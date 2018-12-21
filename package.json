@@ -1,0 +1,11 @@
+{
+    "name": "@pospolitanv/rbk-templator",
+    "version": "0.1.0",
+    "scripts": {
+        "plop": "plop"
+    },
+    "devDependencies": {
+        "plop": "^2.2.0",
+        "simple-git": "^1.107.0"
+    }
+}
