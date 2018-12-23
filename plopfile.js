@@ -1,8 +1,9 @@
 'use strict';
 let protoGenerator = require('./generators/proto-generator');
+let chalk = require('chalk');
 
 module.exports = function (plop) {
-    plop.setWelcomeMessage('CUSTOM'.red + ' Какой проект вам запилить?');
+    plop.setWelcomeMessage(chalk.blue("КАКОЙ ") + chalk.red("ПРОЕКТ ") + chalk.blue("ВАМ ") + chalk.red("ЗАПИЛИТЬ???"));
     plop.addHelper('pathHelper', function (path) {
         if (path && path.lastIndexOf("/") === (path.length - 1))
             path = path.substring(0, path.lastIndexOf("/"));
