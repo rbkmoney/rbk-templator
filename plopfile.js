@@ -1,8 +1,8 @@
 'use strict';
-let protoGenerator = require('./generators/proto-generator');
-let serviceGenerator = require('./generators/service-generator');
-let pathHelper = require('./helpers/path-helper');
-let chalk = require('chalk');
+const protoGenerator = require('./generators/proto-generator');
+const serviceGenerator = require('./generators/service-generator');
+const pathHelper = require('./helpers/path-helper');
+const chalk = require('chalk');
 
 module.exports = function (plop) {
     plop.setWelcomeMessage(chalk.blue("КАКОЙ ") + chalk.red("ПРОЕКТ ") + chalk.blue("ВАМ ") + chalk.red("ЗАПИЛИТЬ???"));

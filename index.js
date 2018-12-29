@@ -3,7 +3,6 @@
 'use strict';
 
 const path = require('path');
-
 const { spawn } = require('child_process');
 
 spawn('node', [path.join(__dirname, './node_modules/.bin/plop'),
