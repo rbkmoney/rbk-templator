@@ -1,10 +1,10 @@
 module.exports = {
-    description: 'Create a java service project structure',
+    description: 'Create a java library project structure',
     prompts: [
         {
             type: 'input',
             name: 'name',
-            message: 'Как называется ваш проект?',
+            message: 'Как называется ваша либа?',
             validate: function (value) {
                 if (value.length === 0) {
                     return "Вы не ввели имя!";
@@ -15,7 +15,7 @@ module.exports = {
         {
             type: 'input',
             name: 'description',
-            message: 'Введите описание вашего сервиса (maven.description):'
+            message: 'Введите описание вашей либы (maven.description):'
         },
         {
             type: 'input',
@@ -31,28 +31,8 @@ module.exports = {
     actions: [
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{packageCase name}}/{{properCase name}}Application.java',
-            templateFile: 'plop-templates/service/java-app.java'
-        },
-        {
-            type: 'add',
-            path: '{{pathHelper path}}src/main/resources/application.yml',
-            templateFile: 'plop-templates/service/spring.yml'
-        },
-        {
-            type: 'add',
-            path: '{{pathHelper path}}src/test/resources/logback-test.xml',
-            templateFile: 'plop-templates/service/service-logback.xml'
-        },
-        {
-            type: 'add',
-            path: '{{pathHelper path}}src/test/java/com/rbkmoney/{{packageCase name}}/{{properCase name}}ApplicationTest.java',
-            templateFile: 'plop-templates/service/java-app-test.java'
-        },
-        {
-            type: 'add',
             path: '{{pathHelper path}}Jenkinsfile',
-            templateFile: 'plop-templates/service/service-jenkinsfile'
+            templateFile: 'plop-templates/library/library-jenkinsfile'
         },
         (answers) => {
             if (answers.withBuildUtils) {
@@ -68,7 +48,7 @@ module.exports = {
         {
             type: 'add',
             path: '{{pathHelper path}}pom.xml',
-            templateFile: 'plop-templates/service/service-pom.xml'
+            templateFile: 'plop-templates/library/library-pom.xml'
         }
     ]
 };

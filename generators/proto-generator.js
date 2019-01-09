@@ -29,7 +29,7 @@ module.exports = {
     actions: [
         {
             type: 'add',
-            path: '{{pathHelper path}}proto/{{lowerCase name}}.thrift',
+            path: '{{pathHelper path}}proto/{{snakeCase name}}.thrift',
             templateFile: 'plop-templates/proto/proto.thrift'
         },
         {

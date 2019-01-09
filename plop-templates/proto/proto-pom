@@ -10,7 +10,7 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>{{lowerCase name}}-proto</artifactId>
+    <artifactId>{{kebabCase name}}-proto</artifactId>
     <version>SNAPSHOT</version>
     <packaging>jar</packaging>
 

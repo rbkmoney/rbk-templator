@@ -1,5 +1,5 @@
 #!groovy
-build('{{lowerCase name}}', 'java-maven') {
+build('{{kebabCase name}}', 'java-maven') {
     checkoutRepo()
     loadBuildUtils()
 
