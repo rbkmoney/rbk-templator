@@ -40,6 +40,7 @@ module.exports = {
         (answers) => {
             if (answers.withBuildUtils) {
                 let git = require('simple-git')(answers.path);
+                git.init();
                 git.subModule(["add", "-b", "master", "git@github.com:rbkmoney/build_utils.git", "build_utils"]);
             }
         },
