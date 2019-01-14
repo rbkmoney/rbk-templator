@@ -24,6 +24,7 @@
     </properties>
 
     <dependencies>
+        <!--rbkmoney-->
         <dependency>
             <groupId>com.rbkmoney.woody</groupId>
             <artifactId>woody-thrift</artifactId>
