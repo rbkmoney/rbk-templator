@@ -57,7 +57,7 @@ module.exports = {
         {
             type: 'add',
             path: '{{pathHelper path}}pom.xml',
-            templateFile: 'plop-templates/proto/proto-pom'
+            templateFile: 'plop-templates/proto/proto-pom.xml'
         }
     ]
 };
