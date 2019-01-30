@@ -10,6 +10,9 @@ management:
 spring:
   application:
     name: @project.name@
+  output:
+    ansi:
+      enabled: always
 info:
   version: @project.version@
   stage: dev
