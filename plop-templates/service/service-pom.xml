@@ -23,7 +23,7 @@
         <server.port>8022</server.port>
         <exposed.ports>${server.port}</exposed.ports>
         <dockerfile.base.service.tag>0d28a0d8a1074fbe7b1555ef195cbccf7f4f8806</dockerfile.base.service.tag>
-        <shared.resources.version>0.3.3</shared.resources.version>
+        <shared.resources.version>0.3.5</shared.resources.version>
     </properties>
 
     <dependencies>
