@@ -5,10 +5,10 @@
         "plop": "plop"
     },
     "dependencies": {
-        "chalk": "latest",
-        "plop": "^2.2.0",
-        "simple-git": "^1.107.0",
-        "child_process": "^1.0.2"
+        "chalk": "2.2.0",
+        "plop": "2.2.0",
+        "simple-git": "1.107.0",
+        "child_process": "1.0.2"
     },
     "bin": {
         "rbk-templator": "./index.js"
