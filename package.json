@@ -6,7 +6,7 @@
     },
     "dependencies": {
         "chalk": "latest",
-        "plop": "^2.4.0",
+        "plop": "^2.2.0",
         "simple-git": "^1.107.0",
         "child_process": "^1.0.2"
     },
