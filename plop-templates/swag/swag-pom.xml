@@ -137,10 +137,7 @@
 
     <profiles>
         <profile>
-            <id>client</id>
-            <properties>
-                <envClassifier>client</envClassifier>
-            </properties>
+            <id>server</id>
             <build>
                 <plugins>
                     <plugin>
@@ -173,10 +170,7 @@
             </build>
         </profile>
         <profile>
-            <id>server</id>
-            <properties>
-                <envClassifier>server</envClassifier>
-            </properties>
+            <id>client</id>
             <build>
                 <plugins>
                     <plugin>
