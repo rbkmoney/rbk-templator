@@ -93,7 +93,7 @@ module.exports = {
             type: 'addMany',
             destination: "{{pathHelper path}}/spec",
             base: 'plop-templates/swag/spec/',
-            templateFiles: defenitionFiles
+            templateFiles: definitionFiles
         },
         (answers) => {
             if (answers.withBuildUtils) {
