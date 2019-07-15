@@ -11,7 +11,7 @@ build:
 deploy:
   steps:
     - lukevivier/gh-pages:
-      repo: rbkmoney/ssp-api
+      repo: rbkmoney/swag-{{kebabCase name}}-public
       token: ${GITHUB_API_TOKEN}
   after-steps:
     - slack-notifier:

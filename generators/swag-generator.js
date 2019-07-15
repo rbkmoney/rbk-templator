@@ -3,7 +3,7 @@ const scriptFiles = [
     "plop-templates/swag/scripts/*.js"
 ];
 
-const defenitionFiles = [
+const definitionFiles = [
     "plop-templates/swag/spec/definitions/*.yaml"
 ];
 
