@@ -28,7 +28,7 @@ gulp.task('serve', ['build', 'watch', 'edit'], function() {
 gulp.task('edit', function() {
     portfinder.getPort({port: 5000}, function (err, port) {
         let app = connect();
-        app.use(swaggerRepo.swaggerEditorMiddark-apidleware());
+        app.use(swaggerRepo.swaggerEditorMiddleware());
         app.listen(port);
         util.log(util.colors.green('swagger-editor started http://localhost:' + port));
     });
