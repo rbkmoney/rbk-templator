@@ -2,6 +2,7 @@
 const protoGenerator = require('./generators/proto-generator');
 const serviceGenerator = require('./generators/service-generator');
 const libraryGenerator = require('./generators/library-generator');
+const swagGenerator = require('./generators/swag-generator');
 const pathHelper = require('./helpers/path-helper');
 const packageCase = require('./helpers/package-case-helper');
 const chalk = require('chalk');
@@ -17,4 +18,5 @@ module.exports = function (plop) {
     plop.setGenerator('java-proto', protoGenerator);
     plop.setGenerator('java-service', serviceGenerator);
     plop.setGenerator('java-library', libraryGenerator);
+    plop.setGenerator('swag-template', swagGenerator);
 };
