@@ -9,6 +9,7 @@ const portfinder = require('portfinder');
 const swaggerRepo = require('swagger-repo');
 
 const DIST_DIR = 'web_deploy';
+const SPEC_DIR = 'spec';
 
 gulp.task('serve', ['build', 'watch', 'edit'], function() {
     portfinder.getPort({port: 3000}, function (err, port) {
@@ -46,5 +47,5 @@ gulp.task('reload', ['build'], function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch(['api/swag-{{kebabCase name}}/**/*', 'web/**/*'], ['reload']);
+    gulp.watch([`${SPEC_DIR}/**/*`, 'web/**/*'], ['reload']);
 });

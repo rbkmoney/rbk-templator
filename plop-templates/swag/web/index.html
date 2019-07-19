@@ -27,7 +27,7 @@
       // simple way to redirect user to one or another
       var spec = window.location.search.substring(1);
       if (spec.length === 0) {
-          spec = "api/swag-{{kebabCase name}}/spec/swagger.json";
+          spec = "./swagger.json";
       }
       Redoc.init(
           spec,
