@@ -8,6 +8,6 @@ build('{{kebabCase name}}', 'docker-host') {
         javaLibPipeline = load("build_utils/jenkins_lib/pipeJavaLib.groovy")
     }
 
-    def buildImageTag = "269686d735abef363f9f40a1bf4e1b7c751f3722"
+    def buildImageTag = "c66dc597fdc30abcb7a6368ba7cc13c02151f8de"
     javaLibPipeline(buildImageTag)
 }

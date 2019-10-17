@@ -1,13 +1,16 @@
 server:
   port: @server.port@
+
 management:
   security:
     flag: false
   metrics:
     export:
       statsd:
-        flavor: etsy
         enabled: false
+        flavor: etsy
+  endpoint.health.show-details: always
+
 spring:
   application:
     name: @project.name@
