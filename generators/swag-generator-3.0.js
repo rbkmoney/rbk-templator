@@ -102,6 +102,7 @@ module.exports = {
         },
         {
             type: 'addMany',
+            destination: "{{pathHelper path}}/spec",
             base: 'plop-templates/swag/spec/',
             templateFiles: componentFiles
         },
