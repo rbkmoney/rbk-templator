@@ -1,14 +1,25 @@
 const scriptFiles = [
-    "plop-templates/swag/scripts/plugins/*.js",
     "plop-templates/swag/scripts/*.js"
 ];
 
-const definitionFiles = [
-    "plop-templates/swag/spec/definitions/*.yaml"
+const componentFiles = [
+    "plop-templates/swag/spec/components/securitySchemes/*.yaml"
+];
+
+const pluginFiles = [
+  "plop-templates/swag/spec/plugins/*.js"
+];
+
+const responseFiles = [
+  "plop-templates/swag/spec/responses/*.yaml"
+];
+
+const schemaFiles = [
+  "plop-templates/swag/spec/components/schemas/*.yaml"
 ];
 
 module.exports = {
-    description: 'Create a swag project structure',
+    description: 'Create a swag OpenAPI 3.0 project structure',
     prompts: [
         {
             type: 'input',
@@ -80,8 +91,8 @@ module.exports = {
         },
         {
             type: 'add',
-            path: '{{pathHelper path}}spec/swagger.yaml',
-            templateFile: 'plop-templates/swag/spec/swagger.yaml'
+            path: '{{pathHelper path}}spec/openapi.yaml',
+            templateFile: 'plop-templates/swag/spec/openapi.yaml'
         },
         {
             type: 'addMany',
@@ -93,7 +104,25 @@ module.exports = {
             type: 'addMany',
             destination: "{{pathHelper path}}/spec",
             base: 'plop-templates/swag/spec/',
-            templateFiles: definitionFiles
+            templateFiles: componentFiles
+        },
+        {
+            type: 'addMany',
+            destination: "{{pathHelper path}}/spec",
+            base: 'plop-templates/swag/spec/',
+            templateFiles: pluginFiles
+        },
+        {
+            type: 'addMany',
+            destination: "{{pathHelper path}}/spec",
+            base: 'plop-templates/swag/spec/',
+            templateFiles: responseFiles
+        },
+        {
+            type: 'addMany',
+            destination: "{{pathHelper path}}/spec",
+            base: 'plop-templates/swag/spec/',
+            templateFiles: schemaFiles
         },
         (answers) => {
             if (answers.withBuildUtils) {

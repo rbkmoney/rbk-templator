@@ -141,23 +141,25 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>io.swagger.codegen.v3</groupId>
+                        <groupId>io.swagger</groupId>
                         <artifactId>swagger-codegen-maven-plugin</artifactId>
-                        <version>3.0.13</version>
+                        <version>2.4.8</version>
                         <executions>
                             <execution>
                                 <id>generate-server</id>
+                                <phase>generate-sources</phase>
                                 <goals>
                                     <goal>generate</goal>
                                 </goals>
                                 <configuration>
                                     <inputSpec>web_deploy/swagger.yaml</inputSpec>
-                                    <language>java</language>
                                     <configOptions>
                                         <dateLibrary>java8</dateLibrary>
                                     </configOptions>
+
                                     <language>spring</language>
                                     <library>spring-mvc</library>
+
                                     <apiPackage>${default.package}.api</apiPackage>
                                     <modelPackage>${default.package}.model</modelPackage>
                                 </configuration>
@@ -172,23 +174,25 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>io.swagger.codegen.v3</groupId>
+                        <groupId>io.swagger</groupId>
                         <artifactId>swagger-codegen-maven-plugin</artifactId>
-                        <version>3.0.13</version>
+                        <version>2.4.8</version>
                         <executions>
                             <execution>
                                 <id>generate-client</id>
+                                <phase>generate-sources</phase>
                                 <goals>
                                     <goal>generate</goal>
                                 </goals>
                                 <configuration>
                                     <inputSpec>web_deploy/swagger.yaml</inputSpec>
-                                    <language>java</language>
                                     <configOptions>
                                         <dateLibrary>java8</dateLibrary>
                                     </configOptions>
+
                                     <language>java</language>
                                     <library>resttemplate</library>
+
                                     <apiPackage>${default.package}.api</apiPackage>
                                     <modelPackage>${default.package}.model</modelPackage>
                                 </configuration>
@@ -197,6 +201,7 @@
                     </plugin>
                 </plugins>
             </build>
+
         </profile>
     </profiles>
 </project>
