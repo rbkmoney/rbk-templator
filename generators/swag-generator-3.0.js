@@ -2,7 +2,7 @@ const scriptFiles = [
     "plop-templates/swag/scripts/*.js"
 ];
 
-const componentsFiles = [
+const componentFiles = [
     "plop-templates/swag/spec/components/securitySchemes/*.yaml"
 ];
 
@@ -104,7 +104,7 @@ module.exports = {
             type: 'addMany',
             destination: "{{pathHelper path}}/spec",
             base: 'plop-templates/swag/spec/',
-            templateFiles: componentsFiles
+            templateFiles: componentFiles
         },
         {
             type: 'addMany',
