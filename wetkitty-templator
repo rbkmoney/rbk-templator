@@ -20,7 +20,7 @@ git checkout -b $BRANCH
 git add macroservice.sls
 git status
 git commit -m "$MESSAGE"
-git push origin master
+git push origin $BRANCH
 
 echo ""
 echo "===================="
