@@ -5,12 +5,14 @@
         "plop": "plop"
     },
     "dependencies": {
-        "chalk": "latest",
+        "chalk": "^4.0.0",
+        "child_process": "^1.0.2",
         "plop": "^2.2.0",
         "simple-git": "^1.107.0",
-        "child_process": "^1.0.2"
+        "shelljs": "^0.8.4"
     },
     "bin": {
-        "rbk-templator": "./index.js"
+        "rbk-templator": "./rbk-templator.js",
+        "wetkitty-templator": "./wetkitty-templator.js"
     }
 }
