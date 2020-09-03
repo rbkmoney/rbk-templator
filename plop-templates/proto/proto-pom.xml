@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.rbkmoney</groupId>
         <artifactId>parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.5</version>
     </parent>
 
     <artifactId>{{kebabCase name}}-proto</artifactId>
@@ -21,6 +21,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <woody.version>[1.1.21,)</woody.version>
+        <damsel.version>1.449-e2de943</damsel.version>
     </properties>
 
     <dependencies>
@@ -28,13 +30,13 @@
         <dependency>
             <groupId>com.rbkmoney.woody</groupId>
             <artifactId>woody-thrift</artifactId>
-            <version>LATEST</version>
+            <version>${woody.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.rbkmoney</groupId>
             <artifactId>damsel</artifactId>
-            <version>1.323-ae26a6c</version>
+            <version>${damsel.version}</version>
         </dependency>
     </dependencies>
 
