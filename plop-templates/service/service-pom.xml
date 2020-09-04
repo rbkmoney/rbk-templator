@@ -24,12 +24,6 @@
         <exposed.ports>${server.port}</exposed.ports>
         <dockerfile.base.service.tag>bc95d0d6dc13c693acd2b274531a7d604b877bf3</dockerfile.base.service.tag>
         <dockerfile.registry>${env.REGISTRY}</dockerfile.registry>
-        <shared.resources.version>0.3.6</shared.resources.version>
-        <woody.version>[1.1.21,)</woody.version>
-        <lombok.version>1.18.4</lombok.version>
-        <spring-boot-starter-metrics-statsd.version>1.1.2</spring-boot-starter-metrics-statsd.version>
-        <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
-        <custom-actuator-endpoints.version>0.0.3</custom-actuator-endpoints.version>
     </properties>
 
     <dependencies>
@@ -37,22 +31,22 @@
         <dependency>
             <groupId>com.rbkmoney</groupId>
             <artifactId>spring-boot-starter-metrics-statsd</artifactId>
-            <version>${spring-boot-starter-metrics-statsd.version}</version>
+            <version>1.1.2</version>
         </dependency>
         <dependency>
             <groupId>com.rbkmoney</groupId>
             <artifactId>custom-actuator-endpoints</artifactId>
-            <version>${custom-actuator-endpoints.version}</version>
+            <version>0.0.4</version>
         </dependency>
         <dependency>
             <groupId>com.rbkmoney.woody</groupId>
             <artifactId>woody-thrift</artifactId>
-            <version>${woody.version}</version>
+            <version>[1.1.21,)</version>
         </dependency>
         <dependency>
             <groupId>com.rbkmoney</groupId>
             <artifactId>shared-resources</artifactId>
-            <version>${shared.resources.version}</version>
+            <version>0.3.6</version>
         </dependency>
 
         <!--spring-->
@@ -79,12 +73,12 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>${javax.servlet-api.version}</version>
+            <version>4.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
+            <version>1.18.4</version>
         </dependency>
 
         <!--test-->
