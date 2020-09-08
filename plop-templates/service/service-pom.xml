@@ -13,7 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>{{sentenceCase name}}</name>
+    <name>{{kebabCase name}}</name>
     <description>{{description}}</description>
 
     <properties>
@@ -22,7 +22,7 @@
         <java.version>11</java.version>
         <server.port>8022</server.port>
         <exposed.ports>${server.port}</exposed.ports>
-        <dockerfile.base.service.tag>bc95d0d6dc13c693acd2b274531a7d604b877bf3</dockerfile.base.service.tag>
+        <dockerfile.base.service.tag>57e26d8ee999d7b0b50248c22afc63e6f926d276</dockerfile.base.service.tag>
         <dockerfile.registry>${env.REGISTRY}</dockerfile.registry>
     </properties>
 
@@ -46,7 +46,7 @@
         <dependency>
             <groupId>com.rbkmoney</groupId>
             <artifactId>shared-resources</artifactId>
-            <version>0.3.6</version>
+            <version>0.3.8</version>
         </dependency>
 
         <!--spring-->
@@ -78,7 +78,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.4</version>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!--test-->
