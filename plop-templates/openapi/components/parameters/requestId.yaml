@@ -1,0 +1,9 @@
+name: X-Request-ID
+in: header
+description: Уникальный идентификатор запроса к системе
+required: true
+schema:
+  type: string
+  minLength: 4
+  maxLength: 64
+  example: RQID-Z08G3EFE5DZ429VVO755BM19D51

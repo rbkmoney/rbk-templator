@@ -1,0 +1,15 @@
+{
+  "name": "swag-{{kebabCase name}}",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@redocly/openapi-cli": "^1.0.0-beta.25",
+    "json-merge-patch": "^1.0.0",
+    "redoc-cli": "^0.10.2"
+  },
+  "scripts": {
+    "start": "openapi preview-docs",
+    "build": "openapi bundle -o web_deploy/openapi.yaml && openapi bundle -o web_deploy/openapi.json",
+    "validate": "openapi lint"
+  }
+}
