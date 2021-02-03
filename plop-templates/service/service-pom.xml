@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.rbkmoney</groupId>
         <artifactId>service-parent-pom</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.5</version>
     </parent>
 
     <artifactId>{{kebabCase name}}</artifactId>
@@ -23,9 +23,7 @@
         <server.port>8022</server.port>
         <management.port>8023</management.port>
         <exposed.ports>${server.port} ${management.port}</exposed.ports>
-        <dockerfile.base.service.tag>57e26d8ee999d7b0b50248c22afc63e6f926d276</dockerfile.base.service.tag>
         <dockerfile.registry>${env.REGISTRY}</dockerfile.registry>
-        <shared.resources.version>0.3.8</shared.resources.version>
     </properties>
 
     <dependencies>
@@ -33,22 +31,18 @@
         <dependency>
             <groupId>com.rbkmoney</groupId>
             <artifactId>custom-metrics-spring-boot-starter</artifactId>
-            <version>1.2.0</version>
         </dependency>
         <dependency>
             <groupId>com.rbkmoney</groupId>
             <artifactId>custom-actuator-endpoints</artifactId>
-            <version>0.0.4</version>
         </dependency>
         <dependency>
             <groupId>com.rbkmoney.woody</groupId>
             <artifactId>woody-thrift</artifactId>
-            <version>[1.1.21,)</version>
         </dependency>
         <dependency>
             <groupId>com.rbkmoney</groupId>
             <artifactId>shared-resources</artifactId>
-            <version>${shared.resources.version}</version>
         </dependency>
 
         <!--spring-->
@@ -75,12 +69,10 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>4.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
 
