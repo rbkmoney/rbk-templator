@@ -36,6 +36,11 @@ module.exports = {
         },
         {
             type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{packageCase name}}/client',
+            templateFile: 'plop-templates/service/package/package-info.java'
+        },
+        {
+            type: 'add',
             path: '{{pathHelper path}}src/main/resources/application.yml',
             templateFile: 'plop-templates/service/spring.yml'
         },
