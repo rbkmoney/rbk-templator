@@ -36,8 +36,8 @@ module.exports = {
         },
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{packageCase name}}/client',
-            templateFile: 'plop-templates/service/packages/package-info.java'
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{packageCase name}}/client/package-info.java',
+            templateFile: 'plop-templates/service/packages/client-package-info.java'
         },
         {
             type: 'add',
