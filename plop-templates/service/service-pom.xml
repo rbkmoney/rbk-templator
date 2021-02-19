@@ -124,7 +124,7 @@
                 </dependencies>
                 <configuration>
                     <resourceBundles>
-                        <resourceBundle>com.rbkmoney:shared-resources:${shared.resources.version}</resourceBundle>
+                        <resourceBundle>com.rbkmoney:shared-resources:${shared-resources.version}</resourceBundle>
                     </resourceBundles>
                     <attachToMain>false</attachToMain>
                     <attachToTest>false</attachToTest>
