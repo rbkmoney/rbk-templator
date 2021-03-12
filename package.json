@@ -8,8 +8,8 @@
         "chalk": "^4.0.0",
         "child_process": "^1.0.2",
         "plop": "^2.2.0",
-        "simple-git": "^1.107.0",
-        "shelljs": "^0.8.4"
+        "shelljs": "^0.8.4",
+        "simple-git": "^1.107.0"
     },
     "bin": {
         "rbk-templator": "./rbk-templator.js",
