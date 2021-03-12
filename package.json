@@ -1,5 +1,5 @@
 {
-    "name": "@pospolitanv/rbk-templator",
+    "name": "@rbkmoney/rbk-templator",
     "version": "0.1.7",
     "scripts": {
         "plop": "plop"
