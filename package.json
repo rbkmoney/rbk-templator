@@ -8,12 +8,17 @@
         "chalk": "^4.0.0",
         "child_process": "^1.0.2",
         "plop": "^2.2.0",
-        "simple-git": "^1.107.0",
-        "shelljs": "^0.8.4"
+        "shelljs": "^0.8.4",
+        "simple-git": "^1.107.0"
+    },
+    "publishConfig": {
+        "registry":"https://npm.pkg.github.com"
+    },
+    "repository": {
+        "url": "https://github.com/rbkmoney/rbk-templator"
     },
     "bin": {
         "rbk-templator": "./rbk-templator.js",
         "wetkitty-templator": "./wetkitty-templator.js"
     }
 }
-
