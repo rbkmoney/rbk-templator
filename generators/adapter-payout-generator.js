@@ -61,12 +61,13 @@ module.exports = {
             path: '{{pathHelper path}}src/main/resources/fixture/errors.json',
             templateFile: 'plop-templates/adapter/payout/src/resources/error-mapping.json'
         },
-        // code
+        // code.main
         {
             type: 'add',
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}Application.java',
             templateFile: 'plop-templates/adapter/payout/src/java-app.java'
         },
+        // code.client
         {
             type: 'add',
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/RemoteClient.java',
@@ -77,6 +78,7 @@ module.exports = {
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/RemoteClientImpl.java',
             templateFile: 'plop-templates/adapter/payout/src/client/RemoteClientImpl.java'
         },
+        // code.client.model
         {
             type: 'add',
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/model/BaseRequest.java',
@@ -87,6 +89,7 @@ module.exports = {
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/model/BaseResponse.java',
             templateFile: 'plop-templates/adapter/payout/src/client/model/BaseResponse.java'
         },
+        // code.client.converter
         {
             type: 'add',
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/converter/RequestConverter.java',
@@ -97,6 +100,7 @@ module.exports = {
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/converter/ResponseConverter.java',
             templateFile: 'plop-templates/adapter/payout/src/client/converter/ResponseConverter.java'
         },
+        // code.config
         {
             type: 'add',
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/config/properties/{{properCase bank_name}}Properties.java',
@@ -122,6 +126,18 @@ module.exports = {
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/config/ServiceConfig.java',
             templateFile: 'plop-templates/adapter/payout/src/config/ServiceConfig.java'
         },
+        // code.model
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/model/EntryStateModelImpl.java',
+            templateFile: 'plop-templates/adapter/payout/src/model/EntryStateModelImpl.java'
+        },
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/model/ExitStateModelImpl.java',
+            templateFile: 'plop-templates/adapter/payout/src/model/ExitStateModelImpl.java'
+        },
+        // code.test
         {
             type: 'add',
             path: '{{pathHelper path}}src/test/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}ApplicationTest.java',
