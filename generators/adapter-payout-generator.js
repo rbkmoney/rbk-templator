@@ -69,57 +69,57 @@ module.exports = {
         },
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}/client/RemoteClient.java',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/RemoteClient.java',
             templateFile: 'plop-templates/adapter/payout/src/client/RemoteClient.java'
         },
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}/client/RemoteClientImpl.java',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/RemoteClientImpl.java',
             templateFile: 'plop-templates/adapter/payout/src/client/RemoteClientImpl.java'
         },
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}/client/model/BaseRequest.java',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/model/BaseRequest.java',
             templateFile: 'plop-templates/adapter/payout/src/client/model/BaseRequest.java'
         },
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}/client/model/BaseResponse.java',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/model/BaseResponse.java',
             templateFile: 'plop-templates/adapter/payout/src/client/model/BaseResponse.java'
         },
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}/client/converter/RequestConverter.java',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/converter/RequestConverter.java',
             templateFile: 'plop-templates/adapter/payout/src/client/converter/RequestConverter.java'
         },
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}/client/converter/ResponseConverter.java',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/converter/ResponseConverter.java',
             templateFile: 'plop-templates/adapter/payout/src/client/converter/ResponseConverter.java'
         },
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}/config/properties/{{properCase bank_name}}Properties.java',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/config/properties/{{properCase bank_name}}Properties.java',
             templateFile: 'plop-templates/adapter/payout/src/config/properties/adapter-properties.java'
         },
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}/config/AppConfig.java',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/config/AppConfig.java',
             templateFile: 'plop-templates/adapter/payout/src/config/AppConfig.java'
         },
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}/config/ProcessorConfig.java',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/config/ProcessorConfig.java',
             templateFile: 'plop-templates/adapter/payout/src/config/ProcessorConfig.java'
         },
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}/config/RestTemplateConfig.java',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/config/RestTemplateConfig.java',
             templateFile: 'plop-templates/adapter/payout/src/config/RestTemplateConfig.java'
         },
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}/config/ServiceConfig.java',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/config/ServiceConfig.java',
             templateFile: 'plop-templates/adapter/payout/src/config/ServiceConfig.java'
         },
         {
