@@ -63,8 +63,6 @@ adapter:
   url: https://3rd-party-url
   username:
   password:
-  keyStorePassword:
-  encryptionAlias:
 
 restTemplate:
   requestTimeout: 60000
