@@ -1,7 +1,6 @@
 package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.converter;
 
-
-import org.springframework.http.ResponseEntity;
+import com.rbkmoney.adapter.payout.kekespekes.client.model.BaseRequest;
 
 /**
  * Родительский класс для конвертации запросов к третьей стороне

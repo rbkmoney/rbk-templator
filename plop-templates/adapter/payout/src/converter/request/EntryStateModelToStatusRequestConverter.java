@@ -1,7 +1,7 @@
-package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.converter;
+package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.converter.request;
 
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.StatusRequest;
-import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.constant.OptionalField;
+import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.constant.OptionsField;
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.EntryStateModelImpl;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
@@ -9,8 +9,6 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
-
-import static com.rbkmoney.adapter.xpate.merit.payout.sign.Signer.sign;
 
 
 /**

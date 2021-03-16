@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Primary;
 public class AppConfig {
 
     @Bean
-    public AdapterStateDeserializer adapterStateDeserializer(ObjectMapper objectMapper) {) {
+    public AdapterStateDeserializer adapterStateDeserializer(ObjectMapper objectMapper) {
         return new AdapterStateDeserializer(objectMapper);
     }
 

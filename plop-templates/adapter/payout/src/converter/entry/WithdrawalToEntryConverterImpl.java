@@ -2,6 +2,7 @@ package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.converter.entry;
 
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.converter.WithdrawalToEntryStateConverter;
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.model.AdapterState;
+import com.rbkmoney.adapter.bank.payout.spring.boot.starter.model.TransactionInfo;
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.state.deserializer.AdapterStateDeserializer;
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.EntryStateModelImpl;
 import com.rbkmoney.cds.client.storage.CdsClientStorage;
@@ -39,11 +40,9 @@ public class WithdrawalToEntryConverterImpl implements WithdrawalToEntryStateCon
         entryModel.setWithdrawalId(withdrawal.getId());
         entryModel.setAmount(withdrawal.getBody().getAmount());
         entryModel.setCurrencyCode(withdrawal.getBody().getCurrency().getSymbolicCode());
-        CardDataProxyModel cardData = cdsStorage.getCardData(withdrawal);
+        CardDataProxyModel cardData = cdsClientStorage.getCardData(withdrawal);
         entryModel.setPan(cardData.getPan());
-        entryModel.setOptions(map);
+        entryModel.setOptions(options);
         return entryModel;
-
-        return entryStateModel;
     }
 }

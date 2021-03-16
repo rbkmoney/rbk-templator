@@ -61,8 +61,8 @@ time.config:
 
 adapter:
   url: https://3rd-party-url
-  username:
-  password:
+  username: test
+  password: test
 
 restTemplate:
   requestTimeout: 60000

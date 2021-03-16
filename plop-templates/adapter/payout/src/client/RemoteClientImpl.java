@@ -22,19 +22,20 @@ public class RemoteClientImpl implements RemoteClient {
 
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
-    private final ResponseConverter<BaseResponse> responseConverter;
+//    todo implement and use
+//    private final ResponseConverter<BaseResponse> responseConverter;
 
     @Value("${adapter.url}")
     private String basePath;
 
     @Override
     public BaseResponse moneyTransfer(MoneyTransferRequest request) {
-
+        return null;
     }
 
     @Override
     public BaseResponse status(StatusRequest request) {
-
+        return null;
     }
 
 }

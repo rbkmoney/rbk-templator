@@ -1,4 +1,4 @@
-package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.converter;
+package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.converter.request;
 
 import com.rbkmoney.adapter.common.utils.converter.PaymentDataConverter;
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.MoneyTransferRequest;

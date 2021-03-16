@@ -1,7 +1,5 @@
 package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.processor;
 
-import com.rbkmoney.adapter.bank.payout.spring.boot.starter.model.AdapterState;
-import com.rbkmoney.adapter.bank.payout.spring.boot.starter.model.Step;
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.processor.Processor;
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.BaseResponse;
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.EntryStateModelImpl;
@@ -35,6 +33,7 @@ public class SuccessProcessor implements Processor<BaseResponse, EntryStateModel
 //            log.info("Received not success response: {}", response);
 //            return next.process(response, entryStateModel);
 //        }
+        return null; //todo delete!
     }
 
 //    public static boolean isSuccess(BaseResponse response) {

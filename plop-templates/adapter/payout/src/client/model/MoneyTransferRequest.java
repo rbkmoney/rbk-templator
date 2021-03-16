@@ -1,7 +1,6 @@
 package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;

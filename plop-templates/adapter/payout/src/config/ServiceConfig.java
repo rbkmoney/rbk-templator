@@ -1,19 +1,18 @@
 package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.config;
 
-import com.rbkmoney.adapter.bank.payout.spring.boot.starter.config.properties.TimerProperties;
+import com.rbkmoney.adapter.bank.payout.spring.boot.starter.converter.WithdrawalToEntryStateConverter;
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.flow.StepResolver;
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.handler.CommonHandler;
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.handler.GetQuoteHandler;
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.handler.HandleCallbackHandler;
-import com.rbkmoney.adapter.bank.payout.spring.boot.starter.service.IntentService;
-import com.rbkmoney.adapter.bank.payout.spring.boot.starter.service.IntentServiceImpl;
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.service.PayoutAdapterService;
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.service.PayoutAdapterServiceLogDecorator;
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.validator.WithdrawalValidator;
+import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.converter.exit.ExitToProcessResultConverterImpl;
+import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.EntryStateModelImpl;
+import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.ExitStateModelImpl;
 import com.rbkmoney.damsel.withdrawals.provider_adapter.AdapterSrv;
-import com.rbkmoney.error.mapping.ErrorMapping;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
