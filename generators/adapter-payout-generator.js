@@ -153,6 +153,27 @@ module.exports = {
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/flow/StepResolverImpl.java',
             templateFile: 'plop-templates/adapter/payout/src/flow/StepResolverImpl.java'
         },
+        // code.handler
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/handler/CallbackHandler.java',
+            templateFile: 'plop-templates/adapter/payout/src/handler/CallbackHandler.java'
+        },
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/handler/GetQuoteHandlerImpl.java',
+            templateFile: 'plop-templates/adapter/payout/src/handler/GetQuoteHandlerImpl.java'
+        },
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/handler/MoneyTransferHandler.java',
+            templateFile: 'plop-templates/adapter/payout/src/handler/MoneyTransferHandler.java'
+        },
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/handler/StatusHandler.java',
+            templateFile: 'plop-templates/adapter/payout/src/handler/StatusHandler.java'
+        },
         // code.model
         {
             type: 'add',

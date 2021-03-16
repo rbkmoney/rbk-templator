@@ -1,9 +1,16 @@
 package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.converter.ResponseConverter;
+import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.BaseResponse;
+import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.MoneyTransferRequest;
+import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.StatusRequest;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * Здесь находится реализация методов вызова 3ей стороны
