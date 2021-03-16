@@ -181,6 +181,12 @@ module.exports = {
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/converter/request/EntryStateModelToStatusRequestConverter.java',
             templateFile: 'plop-templates/adapter/payout/src/converter/request/EntryStateModelToStatusRequestConverter.java'
         },
+        // code.converter.flow
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/flow/StepResolverImpl.java',
+            templateFile: 'plop-templates/adapter/payout/src/flow/StepResolverImpl.java'
+        },
         // code.test
         {
             type: 'add',

@@ -12,8 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Описание ошибочного процессора, должен быть последним в цепочке.
  * Обычно цепочка состоит из двух процессоров успешный->ошибочный.
- * Здесь происходит заполнение exitStateModel на основе ответа от 3ей стороны. Определяется следующий Step для
- * процесса выплаты.
+ * Здесь происходит заполнение exitStateModel на основе ответа от 3ей стороны.
  */
 @Slf4j
 @RequiredArgsConstructor
@@ -24,7 +23,6 @@ public class ErrorProcessor implements Processor<BaseResponse, EntryStateModelIm
         ExitStateModelImpl exitStateModel = new ExitStateModelImpl();
 //        Пример кода:
 //        exitStateModel.setEntryStateModel(entryStateModel);
-//        exitStateModel.setNextState(AdapterState.builder().step(Step.CHECK).build());
 //        if (DECLINED.equals(response.getStatus())) {
 //            exitStateModel.setErrorCode("declined");
 //            exitStateModel.setErrorMessage("payout declined");

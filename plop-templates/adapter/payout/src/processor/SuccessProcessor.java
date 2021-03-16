@@ -12,8 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * Описание успешного процессора, должен принимать в цепочке следующий процессор.
  * Обычно цепочка состоит из двух процессоров успешный->ошибочный.
- * Здесь происходит заполнение exitStateModel на основе ответа от 3ей стороны. Определяется следующий Step для
- * процесса выплаты.
+ * Здесь происходит заполнение exitStateModel на основе ответа от 3ей стороны.
  */
 @Slf4j
 @RequiredArgsConstructor
@@ -28,7 +27,6 @@ public class SuccessProcessor implements Processor<BaseResponse, EntryStateModel
 //            log.info("Success response: {}", response);
 //            ExitStateModelImpl exitStateModel = new ExitStateModelImpl();
 //            exitStateModel.setEntryStateModel(entryStateModel);
-//            exitStateModel.setNextState(AdapterState.builder().step(Step.CHECK).build());
 //            if (response.getStatus() != null) {
 //                exitStateModel.setStatus(response.getStatus());
 //            }
