@@ -89,6 +89,16 @@ module.exports = {
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/model/BaseResponse.java',
             templateFile: 'plop-templates/adapter/payout/src/client/model/BaseResponse.java'
         },
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/model/MoneyTransferRequest.java',
+            templateFile: 'plop-templates/adapter/payout/src/client/model/MoneyTransferRequest.java'
+        },
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/client/model/StatusRequest.java',
+            templateFile: 'plop-templates/adapter/payout/src/client/model/StatusRequest.java'
+        },
         // code.client.converter
         {
             type: 'add',
