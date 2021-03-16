@@ -136,6 +136,23 @@ module.exports = {
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/config/ServiceConfig.java',
             templateFile: 'plop-templates/adapter/payout/src/config/ServiceConfig.java'
         },
+        // code.constant
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/constant/UrlPaths.java',
+            templateFile: 'plop-templates/adapter/payout/src/constant/UrlPaths.java'
+        },
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/constant/OptionsField.java',
+            templateFile: 'plop-templates/adapter/payout/src/constant/OptionsField.java'
+        },
+        // code.flow
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/flow/StepResolverImpl.java',
+            templateFile: 'plop-templates/adapter/payout/src/flow/StepResolverImpl.java'
+        },
         // code.model
         {
             type: 'add',
@@ -180,12 +197,6 @@ module.exports = {
             type: 'add',
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/converter/request/EntryStateModelToStatusRequestConverter.java',
             templateFile: 'plop-templates/adapter/payout/src/converter/request/EntryStateModelToStatusRequestConverter.java'
-        },
-        // code.flow
-        {
-            type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/flow/StepResolverImpl.java',
-            templateFile: 'plop-templates/adapter/payout/src/flow/StepResolverImpl.java'
         },
         // code.servlet
         {

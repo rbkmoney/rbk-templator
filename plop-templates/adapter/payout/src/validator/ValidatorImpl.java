@@ -21,11 +21,11 @@ public class ValidatorImpl implements WithdrawalValidator {
     @Override
     public void validate(Withdrawal withdrawal, Value state, Map<String, String> options) throws ValidationException {
 //        пример проверок:
-//        Objects.requireNonNull(options.get(OptionsField.WALLET_ID.getFieldName()), "Field 'wallet_id' can't be null");
-//        Objects.requireNonNull(options.get(OptionsField.LOGIN)), "Option 'login' must be set");
-//        Objects.requireNonNull(options.get(OptionsField.ENDPOINT)), "Option 'endpoint' must be set");
-//        Objects.requireNonNull(options.get(OptionsField.KEY_PASS)), "Option 'key_pass' must be set");
-//        Objects.requireNonNull(options.get(OptionsField.CERT_NAME)), "Option 'cert_name' must be set");
-//        Objects.requireNonNull(options.get(OptionsField.CONTROL_KEY)), "Option 'control_key' must be set");
+//        Objects.requireNonNull(options.get(OptionsField.WALLET_ID), "Field 'wallet_id' can't be null");
+//        Objects.requireNonNull(options.get(OptionsField.LOGIN), "Option 'login' must be set");
+//        Objects.requireNonNull(options.get(OptionsField.ENDPOINT), "Option 'endpoint' must be set");
+//        Objects.requireNonNull(options.get(OptionsField.KEY_PASS), "Option 'key_pass' must be set");
+//        Objects.requireNonNull(options.get(OptionsField.CERT_NAME), "Option 'cert_name' must be set");
+//        Objects.requireNonNull(options.get(OptionsField.CONTROL_KEY), "Option 'control_key' must be set");
     }
 }

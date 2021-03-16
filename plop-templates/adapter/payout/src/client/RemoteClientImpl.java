@@ -13,8 +13,21 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class RemoteClientImpl implements RemoteClient {
 
+    private final RestTemplate restTemplate;
+    private final ObjectMapper objectMapper;
+    private final ResponseConverter<BaseResponse> responseConverter;
+
     @Value("${adapter.url}")
     private String basePath;
 
+    @Override
+    public BaseResponse moneyTransfer(MoneyTransferRequest request) {
+
+    }
+
+    @Override
+    public BaseResponse status(StatusRequest request) {
+
+    }
 
 }
