@@ -193,6 +193,12 @@ module.exports = {
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/servlet/AdapterServlet.java',
             templateFile: 'plop-templates/adapter/payout/src/servlet/AdapterServlet.java'
         },
+        // code.validator
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/validator/ValidatorImpl.java',
+            templateFile: 'plop-templates/adapter/payout/src/validator/ValidatorImpl.java'
+        },
         // code.test
         {
             type: 'add',
