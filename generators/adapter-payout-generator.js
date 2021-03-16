@@ -158,6 +158,29 @@ module.exports = {
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/processor/SuccessProcessor.java',
             templateFile: 'plop-templates/adapter/payout/src/processor/SuccessProcessor.java'
         },
+        // code.converter.entry
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/converter/entry/WithdrawalToEntryConverterImpl.java',
+            templateFile: 'plop-templates/adapter/payout/src/converter/entry/WithdrawalToEntryConverterImpl.java'
+        },
+        // code.converter.exit
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/converter/exit/ExitToProcessResultConverterImpl.java',
+            templateFile: 'plop-templates/adapter/payout/src/converter/exit/ExitToProcessResultConverterImpl.java'
+        },
+        // code.converter.request
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/converter/request/EntryStateModelToMoneyTransferRequestConverter.java',
+            templateFile: 'plop-templates/adapter/payout/src/converter/request/EntryStateModelToMoneyTransferRequestConverter.java'
+        },
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/converter/request/EntryStateModelToStatusRequestConverter.java',
+            templateFile: 'plop-templates/adapter/payout/src/converter/request/EntryStateModelToStatusRequestConverter.java'
+        },
         // code.test
         {
             type: 'add',
