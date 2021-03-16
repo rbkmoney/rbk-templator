@@ -13,7 +13,7 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper = true)
 public class ExitStateModelImpl extends ExitStateModel {
 
-// пример свойств:
+//    пример свойств:
 //    private String status;
 //    private String paynetOrderId;
 //    private String merchantOrderId;

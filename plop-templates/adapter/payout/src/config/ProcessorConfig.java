@@ -6,8 +6,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * Конфигурация для настройки и заведения процессоров
- * @see com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.processor.Processor
+ * Конфигурация для настройки и заведения процессоров.
+ * Важно заканчивать цепочку с ErrorProcessor, чтобы все необработанные случаи падали в ошибку.
+ * @see com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.processor.SuccessProcessor
  */
 @Configuration
 @RequiredArgsConstructor
@@ -19,4 +20,5 @@ public class ProcessorConfig {
 //        ErrorProcessor errorProcessor = new ErrorProcessor();
 //        return new SuccessProcessor(errorProcessor);
 //    }
+
 }

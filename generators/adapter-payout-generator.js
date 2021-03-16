@@ -137,6 +137,17 @@ module.exports = {
             path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/model/ExitStateModelImpl.java',
             templateFile: 'plop-templates/adapter/payout/src/model/ExitStateModelImpl.java'
         },
+        // code.processor
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/processor/ErrorProcessor.java',
+            templateFile: 'plop-templates/adapter/payout/src/processor/ErrorProcessor.java'
+        },
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/processor/SuccessProcessor.java',
+            templateFile: 'plop-templates/adapter/payout/src/processor/SuccessProcessor.java'
+        },
         // code.test
         {
             type: 'add',
