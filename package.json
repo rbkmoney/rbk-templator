@@ -1,6 +1,6 @@
 {
     "name": "@rbkmoney/rbk-templator",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "scripts": {
         "plop": "plop"
     },
@@ -12,7 +12,7 @@
         "simple-git": "^1.107.0"
     },
     "publishConfig": {
-        "registry":"https://npm.pkg.github.com"
+        "registry": "https://npm.pkg.github.com"
     },
     "repository": {
         "url": "https://github.com/rbkmoney/rbk-templator"
