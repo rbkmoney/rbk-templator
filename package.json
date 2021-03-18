@@ -1,6 +1,6 @@
 {
     "name": "@pospolitanv/rbk-templator",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "scripts": {
         "plop": "plop"
     },
