@@ -1,7 +1,10 @@
 # Installation
 
 1. `brew install node` -- если установлен npm, то можно пропустить этот шаг
-2. `npm install -g git+ssh://github.com/rbkmoney/rbk-templator.git#{last-commit-hash}` (последний номер коммита можно узнать в репозитории, либо в java канале)
+2. `npm install -g @pospolitanv/rbk-templator`
+3. PROFIT
+
+В случае ошибки: `rm -rf /usr/local/lib/node_modules/@pospolitanv` и установить пакет заново
 
 # rbk-templator
 
