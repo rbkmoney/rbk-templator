@@ -1,12 +1,12 @@
 {
-    "name": "@rbkmoney/rbk-templator",
-    "version": "0.1.7",
+    "name": "@pospolitanv/rbk-templator",
+    "version": "0.1.8",
     "lockfileVersion": 2,
     "requires": true,
     "packages": {
         "": {
-            "name": "@rbkmoney/rbk-templator",
-            "version": "0.1.7",
+            "name": "@pospolitanv/rbk-templator",
+            "version": "0.1.8",
             "dependencies": {
                 "chalk": "^4.0.0",
                 "child_process": "^1.0.2",
@@ -1079,8 +1079,7 @@
             "dependencies": {
                 "async": "^2.5.0",
                 "optimist": "^0.6.1",
-                "source-map": "^0.6.1",
-                "uglify-js": "^3.1.4"
+                "source-map": "^0.6.1"
             },
             "bin": {
                 "handlebars": "bin/handlebars"

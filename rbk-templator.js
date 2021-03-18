@@ -3,10 +3,37 @@
 'use strict';
 
 const path = require('path');
-const { spawn } = require('child_process');
+const {exec, execSync, spawn} = require('child_process');
 
-spawn('node', [path.join(__dirname, './node_modules/.bin/plop'),
-    '--plopfile', path.join(__dirname, './plopfile.js')], {
-    cwd: process.cwd(),
-    stdio: 'inherit' // Will use process .stdout, .stdin, .stderr
-});
+async function checkForUpdates() {
+    const {stdout} = await exec('npm outdated -g | grep \"@pospolitanv/rbk-templator\"');
+
+    return new Promise((res) => {
+        stdout.on('data', (data) => {
+            if (data) {
+                console.log("Update is needed!");
+                res("Update needed")
+            }
+            res("res")
+        })
+    })
+}
+
+checkForUpdates()
+    .then((res) => {
+        if (res === "Update needed") {
+            console.log("Updating...")
+            execSync('npm update -g @pospolitanv/rbk-templator');
+            return Promise.resolve("Updated");
+        }
+    })
+    .then((res) => {
+        if (res !== "Updated") {
+            spawn('node',
+                [path.join(__dirname, './node_modules/.bin/plop'), '--plopfile', path.join(__dirname, './plopfile.js')],
+                {cwd: process.cwd(), stdio: 'inherit'}
+            );
+        } else {
+            console.log("Updated. Please, run command again.")
+        }
+    });
