@@ -7,18 +7,16 @@ const {exec, execSync, spawn} = require('child_process');
 
 
 async function checkForUpdates() {
-    const {error, stdout, stderr} = await exec('npm outdated -g | grep \"@pospolitanv/rbk-templator\"');
+    const {stdout} = await exec('npm outdated -g | grep \"@pospolitanv/rbk-templator\"');
 
     return new Promise((res) => {
-        stdout.on('data', (data) => {
+         stdout.on('data', (data) => {
             if (data) {
                 console.log("Update is needed!");
                 res("Update needed")
             }
-        })
-        if (error || stderr) {
-            res("No update needed")
-        }
+        });
+        setTimeout(() => res("timeout"), 5000);
     })
 }
 
