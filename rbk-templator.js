@@ -24,7 +24,8 @@ checkForUpdates()
     .then((res) => {
         if (res === "Update needed") {
             console.log("Updating...")
-            execSync('npm update -g @pospolitanv/rbk-templator');
+            execSync('rm -rf /usr/local/lib/node_modules/@pospolitanv');
+            execSync('npm install -g @pospolitanv/rbk-templator');
             return Promise.resolve("Updated");
         }
         return Promise.resolve("kekes")
