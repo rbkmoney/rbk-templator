@@ -5,8 +5,9 @@
 const path = require('path');
 const {exec, execSync, spawn} = require('child_process');
 
+
 async function checkForUpdates() {
-    const {stdout} = await exec('npm outdated -g | grep \"@pospolitanv/rbk-templator\"');
+    const {error, stdout, stderr} = await exec('npm outdated -g | grep \"@pospolitanv/rbk-templator\"');
 
     return new Promise((res) => {
         stdout.on('data', (data) => {
@@ -14,8 +15,10 @@ async function checkForUpdates() {
                 console.log("Update is needed!");
                 res("Update needed")
             }
-            res("res")
         })
+        if (error || stderr) {
+            res("No update needed")
+        }
     })
 }
 
@@ -26,6 +29,7 @@ checkForUpdates()
             execSync('npm update -g @pospolitanv/rbk-templator');
             return Promise.resolve("Updated");
         }
+        return Promise.resolve("kekes")
     })
     .then((res) => {
         if (res !== "Updated") {
