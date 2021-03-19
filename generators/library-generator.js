@@ -34,6 +34,16 @@ module.exports = {
             path: '{{pathHelper path}}Jenkinsfile',
             templateFile: 'plop-templates/library/library-jenkinsfile'
         },
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{packageCase name}}/.gitkeep',
+            templateFile: 'plop-templates/gitkeep-template'
+        },
+        {
+            type: 'add',
+            path: '{{pathHelper path}}src/test/java/com/rbkmoney/{{packageCase name}}/.gitkeep',
+            templateFile: 'plop-templates/gitkeep-template'
+        },
         (answers) => {
             if (answers.withBuildUtils) {
                 let git = require('simple-git')(answers.path);
