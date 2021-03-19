@@ -64,7 +64,7 @@ module.exports = {
         // code.main
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}Application.java',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/Adapter{{properCase bank_name}}PayoutApplication.java',
             templateFile: 'plop-templates/adapter/payout/src/java-app.java'
         },
         // code.client
@@ -113,7 +113,7 @@ module.exports = {
         // code.config
         {
             type: 'add',
-            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/config/properties/{{properCase bank_name}}Properties.java',
+            path: '{{pathHelper path}}src/main/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/config/properties/Adapter{{properCase bank_name}}PayoutProperties.java',
             templateFile: 'plop-templates/adapter/payout/src/config/properties/adapter-properties.java'
         },
         {
@@ -234,7 +234,7 @@ module.exports = {
         // code.test
         {
             type: 'add',
-            path: '{{pathHelper path}}src/test/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/{{properCase bank_name}}ApplicationTest.java',
+            path: '{{pathHelper path}}src/test/java/com/rbkmoney/{{adapterPayoutDirCase bank_name}}/Adapter{{properCase bank_name}}PayoutApplicationTest.java',
             templateFile: 'plop-templates/adapter/payout/src/java-app-test.java'
         },
         // build_utils

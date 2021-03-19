@@ -15,7 +15,7 @@ import javax.validation.constraints.NotEmpty;
 @Getter
 @Configuration
 @Validated
-public class {{properCase bank_name}}Properties extends AdapterProperties {
+public class Adapter{{properCase bank_name}}PayoutProperties extends AdapterProperties {
 
     @NotEmpty
     private String username;
