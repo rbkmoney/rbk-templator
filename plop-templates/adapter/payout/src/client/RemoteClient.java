@@ -6,7 +6,7 @@ import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.MoneyTra
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.StatusRequest;
 
 /**
- * Здесь находятся методы вызова 3ей стороны
+ * Здесь находятся методы вызова 3ей стороны.
  */
 public interface RemoteClient {
 

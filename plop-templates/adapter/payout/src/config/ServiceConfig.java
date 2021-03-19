@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Primary;
 import java.util.List;
 
 /**
- * Основная конфигурация для работы с библиотекой адаптеров
+ * Основная конфигурация для работы с библиотекой адаптеров.
  */
 @Slf4j
 @Configuration

@@ -7,7 +7,7 @@ import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 /**
- * Пример запроса на проверку статуса выплаты
+ * Пример запроса на проверку статуса выплаты.
  */
 @Data
 @SuperBuilder

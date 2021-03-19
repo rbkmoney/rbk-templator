@@ -12,7 +12,7 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
 /**
- * Описание обработчика, конвертера, процессора для шага удовлетворяющего условию в isHandle - Step.СHECK
+ * Описание обработчика, конвертера, процессора для шага удовлетворяющего условию в isHandle - Step.СHECK.
  */
 @Component
 public class StatusHandler

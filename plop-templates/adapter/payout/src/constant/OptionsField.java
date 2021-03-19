@@ -3,7 +3,7 @@ package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.constant;
 import lombok.NoArgsConstructor;
 
 /**
- * Поля, которые кладутся в options мапу
+ * Поля, которые кладутся в options мапу.
  */
 @NoArgsConstructor
 public class OptionsField {

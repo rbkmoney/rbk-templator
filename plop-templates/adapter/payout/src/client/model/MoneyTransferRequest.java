@@ -8,7 +8,7 @@ import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
 /**
- * Пример запроса на выплату
+ * Пример запроса на выплату.
  */
 @Data
 @SuperBuilder

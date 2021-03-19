@@ -1,6 +1,5 @@
 package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.converter.request;
 
-import com.rbkmoney.adapter.common.utils.converter.PaymentDataConverter;
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.MoneyTransferRequest;
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.EntryStateModelImpl;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +14,8 @@ import java.util.Map;
  */
 @Component
 @RequiredArgsConstructor
-public class EntryStateModelToMoneyTransferRequestConverter implements Converter<EntryStateModelImpl, MoneyTransferRequest> {
+public class EntryStateModelToMoneyTransferRequestConverter
+        implements Converter<EntryStateModelImpl, MoneyTransferRequest> {
 
     @Override
     public MoneyTransferRequest convert(EntryStateModelImpl model) {

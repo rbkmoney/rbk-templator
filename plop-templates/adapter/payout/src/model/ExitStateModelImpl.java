@@ -6,7 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 /**
- * Класс с отличающимися от основных свойствами ExitStateModel
+ * Класс с отличающимися от основных свойствами ExitStateModel.
  */
 @Data
 @ToString(callSuper = true)

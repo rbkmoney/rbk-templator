@@ -13,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * Конфигурация для настройки и заведения процессоров.
  * Важно заканчивать цепочку с ErrorProcessor, чтобы все необработанные случаи падали в ошибку.
+ *
  * @see com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.processor.SuccessProcessor
  * @see com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.processor.ErrorProcessor
  */

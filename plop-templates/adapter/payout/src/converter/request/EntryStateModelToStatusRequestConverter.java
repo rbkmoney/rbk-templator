@@ -1,7 +1,6 @@
 package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.converter.request;
 
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.StatusRequest;
-import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.constant.OptionsField;
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.EntryStateModelImpl;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
