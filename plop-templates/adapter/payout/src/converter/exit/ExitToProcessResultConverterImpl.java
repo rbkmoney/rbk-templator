@@ -38,9 +38,8 @@ public class ExitToProcessResultConverterImpl implements ExitStateToProcessResul
         }
 
         AdapterState nextState = exitStateModel.getNextState();
-        /**
-         * Тут switch() с разными статусами Step
-         */
+
+//Тут switch() с разными статусами Step
 //       пример №1
 //        if (step == Step.PAYOUT || step == Step.CHECK) {
 //            switch (exitStateModel.getState()) {
@@ -55,7 +54,8 @@ public class ExitToProcessResultConverterImpl implements ExitStateToProcessResul
 //                    intent = intentService.getFailureByCode(exitStateModel);
 //                    break;
 //                default:
-//                    throw new IllegalStateException("Payout step. Unknown payout state: " + exitStateModel.getState());
+//                    throw new IllegalStateException("Payout step. Unknown payout state: "
+//                    + exitStateModel.getState());
 //            }
 //        } else {
 //            throw new IllegalStateException("Unknown step: " + step);

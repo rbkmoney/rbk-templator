@@ -12,7 +12,7 @@ import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
 /**
- * Описание обработчика, конвертера, процессора для шага удовлетворяющего условию в isHandle - Step.PAYOUT
+ * Описание обработчика, конвертера, процессора для шага удовлетворяющего условию в isHandle - Step.PAYOUT.
  */
 @Component
 public class MoneyTransferHandler
@@ -20,7 +20,8 @@ public class MoneyTransferHandler
 
     public MoneyTransferHandler(RemoteClient remoteClient,
                                 Converter<EntryStateModelImpl, MoneyTransferRequest> converter,
-                                Processor<BaseResponse, EntryStateModelImpl, ExitStateModelImpl> responseProcessorChain) {
+                                Processor<BaseResponse, EntryStateModelImpl, ExitStateModelImpl>
+                                        responseProcessorChain) {
         super(remoteClient::moneyTransfer, converter, responseProcessorChain);
     }
 

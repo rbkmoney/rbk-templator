@@ -4,12 +4,18 @@ import com.rbkmoney.damsel.withdrawals.provider_adapter.AdapterSrv;
 import com.rbkmoney.woody.thrift.impl.http.THServiceBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.servlet.*;
+import javax.servlet.GenericServlet;
+import javax.servlet.Servlet;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebServlet;
+
 import java.io.IOException;
 
 /**
- * Endpoint
+ * Endpoint.
  */
 @WebServlet("/adapter/{{kebabCase bank_name}}/payout")
 public class AdapterServlet extends GenericServlet {

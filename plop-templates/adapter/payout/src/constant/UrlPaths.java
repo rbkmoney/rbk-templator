@@ -3,7 +3,7 @@ package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.constant;
 import lombok.NoArgsConstructor;
 
 /**
- * Различные endpoint-ы 3ей стороны
+ * Различные endpoint-ы 3ей стороны.
  */
 @NoArgsConstructor
 public class UrlPaths {

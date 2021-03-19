@@ -9,7 +9,7 @@ import org.springframework.validation.annotation.Validated;
 import javax.validation.constraints.NotEmpty;
 
 /**
- * Проперти для работы адаптера (url, user-pass, certificate, etc.)
+ * Проперти для работы адаптера (url, user-pass, certificate, etc.).
  */
 @Setter
 @Getter

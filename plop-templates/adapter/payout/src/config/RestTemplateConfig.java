@@ -20,13 +20,14 @@ import org.springframework.web.client.DefaultResponseErrorHandler;
 import org.springframework.web.client.RestTemplate;
 
 import javax.net.ssl.SSLContext;
+
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.time.Duration;
 
 /**
- * Конфигурация для restTemplate
+ * Конфигурация для restTemplate.
  */
 @Configuration
 @RequiredArgsConstructor

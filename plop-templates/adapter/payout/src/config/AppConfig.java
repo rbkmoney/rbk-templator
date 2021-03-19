@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 /**
- * Различные бины для конфигурации приложения
+ * Различные бины для конфигурации приложения.
  */
 @Configuration
 public class AppConfig {

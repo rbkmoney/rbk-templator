@@ -8,10 +8,10 @@ import com.rbkmoney.damsel.withdrawals.provider_adapter.Withdrawal;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * Валидация необходимых полей в Withdrawal/state/options. Вызывается в самом начале обработки выплаты.
+ *
  * @see com.rbkmoney.adapter.bank.payout.spring.boot.starter.validator.WithdrawalValidator
  * @see com.rbkmoney.adapter.bank.payout.spring.boot.starter.service.PayoutAdapterService
  */

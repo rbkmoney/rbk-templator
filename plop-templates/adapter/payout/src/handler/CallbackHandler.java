@@ -13,7 +13,8 @@ import java.util.Map;
 public class CallbackHandler implements HandleCallbackHandler {
 
     @Override
-    public CallbackResult handleCallback(Callback callback, Withdrawal withdrawal, Value value, Map<String, String> map) {
+    public CallbackResult handleCallback(Callback callback, Withdrawal withdrawal, Value value,
+                                         Map<String, String> map) {
         throw new RuntimeException("Not Supported handle");
     }
 }

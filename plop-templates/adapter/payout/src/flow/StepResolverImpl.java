@@ -11,7 +11,8 @@ import java.util.Objects;
 /**
  * Здесь определяется следующий Step для работы адаптера на основе полей из Model.
  * Можно использовать статусы ответа 3ей стороны, какие-либо поля, на основании которых можно принять решение о
- * следующем шаге
+ * следующем шаге.
+ *
  * @see com.rbkmoney.adapter.bank.payout.spring.boot.starter.model.Step
  */
 @Component
