@@ -18,6 +18,13 @@ module.exports = {
             message: 'Введите описание вашей либы (maven.description):'
         },
         {
+          type: 'list',
+          name: 'language',
+          choices: ['Java', 'Kotlin'],
+          default: 'Java',
+          message: 'Выберите язык:'
+        },
+        {
             type: 'input',
             name: 'path',
             message: 'В какой директории создать шаблон? [.]'
