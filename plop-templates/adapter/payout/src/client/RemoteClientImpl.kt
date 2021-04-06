@@ -15,11 +15,11 @@ import org.springframework.web.client.RestTemplate
  */
 @Service
 class RemoteClientImpl(
-        private val restTemplate: RestTemplate,
-        private val objectMapper: ObjectMapper,
+    private val restTemplate: RestTemplate,
+    private val objectMapper: ObjectMapper,
 //        todo implement and use
 //        private val responseConverter: ResponseConverter<BaseResponse>,
-        @Value("\${adapter.url}") private val basePath: String
+    @Value("\${adapter.url}") private val basePath: String
 ) : RemoteClient {
 
     override fun moneyTransfer(request: MoneyTransferRequest): BaseResponse {

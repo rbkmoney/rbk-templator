@@ -2,7 +2,6 @@ package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.converter.request
 
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.MoneyTransferRequest
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.EntryStateModelImpl
-import lombok.RequiredArgsConstructor
 import org.springframework.core.convert.converter.Converter
 import org.springframework.stereotype.Component
 
@@ -14,6 +13,6 @@ import org.springframework.stereotype.Component
 class EntryStateModelToMoneyTransferRequestConverter : Converter<EntryStateModelImpl, MoneyTransferRequest> {
     override fun convert(model: EntryStateModelImpl): MoneyTransferRequest {
         val options = model.options
-        return MoneyTransferRequest("") //todo 3rd-party fields here
+        return MoneyTransferRequest("") // todo 3rd-party fields here
     }
 }

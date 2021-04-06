@@ -7,10 +7,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(classes = [Adapter{{properCase bank_name}}PayoutApplication::class])
-class Adapter{{properCase bank_name}}PayoutApplicationTests {
+class Adapter{{properCase bank_name}}PayoutApplicationTest {
 
     @Test
     fun contextLoads() {
     }
-
 }

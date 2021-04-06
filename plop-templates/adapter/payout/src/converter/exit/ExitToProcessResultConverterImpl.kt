@@ -4,7 +4,6 @@ import com.rbkmoney.adapter.bank.payout.spring.boot.starter.converter.ExitStateT
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.model.AdapterState
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.model.EntryStateModel
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.model.ExitStateModel
-import com.rbkmoney.adapter.bank.payout.spring.boot.starter.model.Step
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.service.IntentService
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.state.serializer.AdapterStateSerializer
 import com.rbkmoney.adapter.common.model.PollingInfo
@@ -14,7 +13,6 @@ import com.rbkmoney.damsel.withdrawals.provider_adapter.Intent
 import com.rbkmoney.damsel.withdrawals.provider_adapter.ProcessResult
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
-
 import java.time.Instant
 
 @Component
@@ -33,7 +31,7 @@ class ExitToProcessResultConverterImpl(
         }
         val nextState: AdapterState = exitStateModel.nextState
 
-//Тут switch() с разными статусами Step
+// Тут switch() с разными статусами Step
 //       пример №1
 //        intent = if (step == Step.PAYOUT || step == Step.CHECK) {
 //                when (exitStateModel.state) {

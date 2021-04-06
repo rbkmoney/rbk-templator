@@ -61,6 +61,19 @@
                 <artifactId>kotlin-maven-plugin</artifactId>
                 <version>${kotlin.version}</version>
             </plugin>
+            <plugin>
+                <groupId>com.github.gantsign.maven</groupId>
+                <artifactId>ktlint-maven-plugin</artifactId>
+                <version>1.9.0</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
         {{/if_eq}}
     </build>

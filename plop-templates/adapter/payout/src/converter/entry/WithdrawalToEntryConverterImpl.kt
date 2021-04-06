@@ -1,8 +1,8 @@
-package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.converter.entry;
+package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.converter.entry
 
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.converter.WithdrawalToEntryStateConverter
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.state.deserializer.AdapterStateDeserializer
-import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.EntryStateModelImpl;
+import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.EntryStateModelImpl
 import com.rbkmoney.cds.client.storage.CdsClientStorage
 import com.rbkmoney.damsel.msgpack.Value
 import com.rbkmoney.damsel.withdrawals.provider_adapter.Withdrawal
@@ -15,10 +15,14 @@ import org.springframework.stereotype.Component
 class WithdrawalToEntryConverterImpl(
     private val cdsClientStorage: CdsClientStorage,
     private val adapterStateDeserializer: AdapterStateDeserializer
-): WithdrawalToEntryStateConverter<EntryStateModelImpl> {
+) : WithdrawalToEntryStateConverter<EntryStateModelImpl> {
 
-    //todo не забудь добавить свои поля из EntryStateModelImpl
-    override fun convert(withdrawal: Withdrawal, state: Value?, options: MutableMap<String, String>?): EntryStateModelImpl {
+    // todo не забудь добавить свои поля из EntryStateModelImpl
+    override fun convert(
+        withdrawal: Withdrawal,
+        state: Value?,
+        options: MutableMap<String, String>?
+    ): EntryStateModelImpl {
         val entryModel = EntryStateModelImpl()
         val data = state?.let {
             if (state.isSetBin && state.bin.isNotEmpty()) {
