@@ -9,7 +9,7 @@ import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.StatusRe
  */
 interface RemoteClient {
 
-    //предложение стандартных названий методов для вывода и проверки статуса вывода
+    // предложение стандартных названий методов для вывода и проверки статуса вывода
     fun moneyTransfer(request: MoneyTransferRequest): BaseResponse
 
     fun status(request: StatusRequest): BaseResponse

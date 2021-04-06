@@ -5,7 +5,7 @@ package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.constant
  */
 object OptionsField {
 //    пример таких полей:
-//    const val WALLET_ID = "wallet_id"
+    const val WALLET_ID = "wallet_id"
 //    const val LOGIN = "login"
 //    const val ENDPOINT = "endpoint"
 //    const val KEY_PASS = "key_pass"

@@ -33,10 +33,7 @@ class SuccessProcessor(
     companion object {
         private val log = LoggerFactory.getLogger(SuccessProcessor::class.java)
 
-        fun isSuccess(response: BaseResponse?): Boolean {
-            return response != null
-                    && response.errorCode == null
-                    && response.errorMessage == null
-        }
+        fun isSuccess(response: BaseResponse?): Boolean =
+            response != null && response.errorCode == null && response.errorMessage == null
     }
 }

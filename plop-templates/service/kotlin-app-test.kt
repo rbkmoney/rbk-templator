@@ -7,10 +7,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(classes = [{{properCase name}}Application::class])
-class {{properCase name}}ApplicationTests {
+class {{properCase name}}ApplicationTest {
 
     @Test
     fun contextLoads() {
     }
-
 }

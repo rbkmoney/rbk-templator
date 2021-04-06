@@ -7,7 +7,7 @@ import org.springframework.boot.web.servlet.ServletComponentScan
 
 @ServletComponentScan
 @SpringBootApplication
-class Adapter{{properCase bank_name}}PayoutApplication: SpringApplication()
+class Adapter{{properCase bank_name}}PayoutApplication : SpringApplication()
 
 fun main(args: Array<String>) {
     runApplication<Adapter{{properCase bank_name}}PayoutApplication>(*args)

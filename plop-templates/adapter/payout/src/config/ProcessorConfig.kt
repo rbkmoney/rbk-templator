@@ -28,5 +28,4 @@ class ProcessorConfig {
     fun responseProcessorChain(): Processor<BaseResponse, EntryStateModelImpl, ExitStateModelImpl> {
         return SuccessProcessor(ErrorProcessor())
     }
-
 }
