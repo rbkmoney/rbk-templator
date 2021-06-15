@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.rbkmoney</groupId>
         <artifactId>service-parent-pom</artifactId>
-        <version>1.2.5</version>
+        <version>1.2.7</version>
     </parent>
 
     <artifactId>adapter-{{kebabCase bank_name}}-payout</artifactId>
