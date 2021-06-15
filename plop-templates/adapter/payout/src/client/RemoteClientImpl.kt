@@ -5,7 +5,7 @@ import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.converter.Resp
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.BaseResponse
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.MoneyTransferRequest
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.StatusRequest
-import org.slf4j.LoggerFactory
+import mu.KotlinLogging
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
 import org.springframework.web.client.RestTemplate
@@ -22,15 +22,13 @@ class RemoteClientImpl(
     @Value("\${adapter.url}") private val basePath: String
 ) : RemoteClient {
 
+    private val log = KotlinLogging.logger { }
+
     override fun moneyTransfer(request: MoneyTransferRequest): BaseResponse {
         TODO("Not yet implemented")
     }
 
     override fun status(request: StatusRequest): BaseResponse {
         TODO("Not yet implemented")
-    }
-
-    companion object {
-        private val log = LoggerFactory.getLogger(RemoteClientImpl::class.java)
     }
 }

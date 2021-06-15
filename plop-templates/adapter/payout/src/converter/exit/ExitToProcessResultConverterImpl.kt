@@ -11,7 +11,7 @@ import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.ExitStateModelI
 import com.rbkmoney.damsel.msgpack.Value
 import com.rbkmoney.damsel.withdrawals.provider_adapter.Intent
 import com.rbkmoney.damsel.withdrawals.provider_adapter.ProcessResult
-import org.slf4j.LoggerFactory
+import mu.KotlinLogging
 import org.springframework.stereotype.Component
 import java.time.Instant
 
@@ -21,8 +21,10 @@ class ExitToProcessResultConverterImpl(
     private val intentService: IntentService
 ) : ExitStateToProcessResultConverter<ExitStateModelImpl> {
 
+    private val log = KotlinLogging.logger { }
+
     override fun convert(exitStateModel: ExitStateModelImpl): ProcessResult {
-        log.info("ExitState converter. Exit state model: {}", exitStateModel)
+        log.info { "ExitState converter. Exit state model: $exitStateModel" }
         val entryStateModel: EntryStateModel = exitStateModel.entryStateModel
         val step = entryStateModel.state.step
         var intent = Intent()
@@ -69,7 +71,7 @@ class ExitToProcessResultConverterImpl(
             setNextState(Value.bin(stateSerializer.writeByte(nextState)))
             setIntent(intent)
         }
-        log.info("ExitState converter. ProcessResult: {}", processResult)
+        log.info { "ExitState converter. ProcessResult: $processResult" }
         return processResult
     }
 
@@ -79,9 +81,5 @@ class ExitToProcessResultConverterImpl(
             maxDateTimePolling = intentService.extractMaxDateTimeInstant(exitStateModel.entryStateModel)
         }
         exitStateModel.nextState.pollingInfo = pollingInfo
-    }
-
-    companion object {
-        private val log = LoggerFactory.getLogger(ExitToProcessResultConverterImpl::class.java)
     }
 }

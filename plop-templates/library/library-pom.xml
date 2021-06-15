@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.rbkmoney</groupId>
         <artifactId>library-parent-pom</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.3</version>
     </parent>
 
     <groupId>com.rbkmoney.{{dotCase name}}</groupId>
@@ -22,6 +22,8 @@
 
         {{#if_eq language 'Kotlin'}}
         <kotlin.version>1.4.31</kotlin.version>
+
+        <kotlin-logging.version>2.0.6</kotlin-logging.version>
         {{/if_eq}}
     </properties>
 
@@ -47,6 +49,11 @@
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
             <version>${kotlin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.microutils</groupId>
+            <artifactId>kotlin-logging-jvm</artifactId>
+            <version>${kotlin-logging.version}</version>
         </dependency>
         {{/if_eq}}
     </dependencies>
