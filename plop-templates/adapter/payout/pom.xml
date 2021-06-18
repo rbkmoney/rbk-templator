@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.rbkmoney</groupId>
         <artifactId>service-parent-pom</artifactId>
-        <version>1.2.7</version>
+        <version>2.0.2</version>
     </parent>
 
     <artifactId>adapter-{{kebabCase bank_name}}-payout</artifactId>
@@ -17,7 +17,7 @@
     <description>{{description}}</description>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>15</java.version>
         {{#if_eq language 'Kotlin'}}
         <kotlin.version>1.4.31</kotlin.version>
         {{/if_eq}}
