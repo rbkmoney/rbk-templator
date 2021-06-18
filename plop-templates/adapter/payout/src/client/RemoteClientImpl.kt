@@ -1,7 +1,6 @@
 package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.converter.ResponseConverter
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.BaseResponse
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.MoneyTransferRequest
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.client.model.StatusRequest
