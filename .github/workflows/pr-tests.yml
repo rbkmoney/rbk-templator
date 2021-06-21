@@ -1,0 +1,70 @@
+# This workflow will run tests on plop generated projects using maven (on PR created)
+
+name: Running tests on generated projects
+
+on: pull_request
+
+jobs:
+  build-with-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm run plop java-library java-library test Java output/java-library n
+      - run: npm run plop java-library kotlin-library test Kotlin output/kotlin-library n
+      - run: npm run plop java-service java-service test Java output/java-service n
+      - run: npm run plop java-service kotlin-service test Kotlin output/kotlin-service n
+      - run: npm run plop java-adapter-payout bank test Java output/java-bank-payout n
+      - run: npm run plop java-adapter-payout bank test Kotlin output/kotlin-bank-payout n
+      - run: npm run plop swag-template-3.0 swag swag output/swag n
+      - uses: actions/upload-artifact@v2
+        with:
+          name: generated-sources
+          path: output/
+
+
+  test-with-maven:
+    needs: build-with-npm
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache local Maven repository
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+      - name: Set up JDK 15
+        uses: actions/setup-java@v2
+        with:
+          java-version: '15'
+          distribution: 'adopt'
+      - uses: actions/download-artifact@v2
+        with:
+          name: generated-sources
+          path: output/
+      - name: Test build of java-library
+        run: mvn verify
+        working-directory: output/java-library/
+      - name: Test build of kotlin-library
+        run: mvn verify
+        working-directory: output/kotlin-library/
+      - name: Test build of java-service
+        run: mvn verify
+        working-directory: output/java-service/
+      - name: Test build of kotlin-service
+        run: mvn verify
+        working-directory: output/kotlin-service/
+      - name: Test build of java-bank-payout
+        run: mvn verify
+        working-directory: output/java-bank-payout/
+      - name: Test build of kotlin-bank-payout
+        run: mvn verify
+        working-directory: output/kotlin-bank-payout/
+      - name: Test build of swag
+        run: mvn verify
+        working-directory: output/swag/
