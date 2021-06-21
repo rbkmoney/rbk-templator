@@ -1,13 +1,4 @@
-#plop java-library java-library test Java java-library n
-#plop java-library kotlin-library test Kotlin kotlin-library n
-#plop java-service java-service test Java java-service n
-#plop java-service kotlin-service test Kotlin kotlin-service n
-#plop java-adapter-payout test-bank test Java java-test-bank-payout n
-#plop java-adapter-payout test-bank test Kotlin kotlin-test-bank-payout n
-#plop swag-template-3.0 swag swag swag n
-
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://help.github.com/actions/language-and-framework-guides/publishing-nodejs-packages
+# This workflow will run tests on plop generated projects using maven (on PR created)
 
 name: Running tests on generated projects
 
