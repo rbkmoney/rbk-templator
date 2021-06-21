@@ -44,6 +44,24 @@ jobs:
         with:
           name: generated-sources
           path: output/
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: output/
+      - name: Test build of java-library
+        run: mvn verify
+        working-directory: output/java-library/
+      - name: Test build of kotlin-library
+        run: mvn verify
+        working-directory: output/kotlin-library/
+      - name: Test build of java-service
+        run: mvn verify
+        working-directory: output/java-service/
+      - name: Test build of kotlin-service
+        run: mvn verify
+        working-directory: output/kotlin-service/
+      - name: Test build of java-bank-payout
+        run: mvn verify
+        working-directory: output/java-bank-payout/
+      - name: Test build of kotlin-bank-payout
+        run: mvn verify
+        working-directory: output/kotlin-bank-payout/
+      - name: Test build of swag
+        run: mvn verify
+        working-directory: output/swag/
