@@ -36,6 +36,7 @@ jobs:
 
 
   test-with-maven:
+    needs: build-with-npm
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
