@@ -25,6 +25,11 @@ class ExitToProcessResultConverterImpl(
 
     override fun convert(exitStateModel: ExitStateModelImpl): ProcessResult {
         log.info { "ExitState converter. Exit state model: $exitStateModel" }
+
+        if (exitStateModel.getErrorCode() != null) {
+            return processResult.setIntent(intentService.getFailureByCodeAndDesc(exitStateModel))
+        }
+
         val entryStateModel: EntryStateModel = exitStateModel.entryStateModel
         val step = entryStateModel.state.step
         var intent = Intent()
