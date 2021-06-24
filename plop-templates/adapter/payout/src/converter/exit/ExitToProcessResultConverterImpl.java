@@ -32,7 +32,7 @@ public class ExitToProcessResultConverterImpl implements ExitStateToProcessResul
         log.info("ExitState converter. Exit state model: {}", exitStateModel);
 
         if (exitStateModel.getErrorCode() != null) {
-            return processResult.setIntent(intentService.getFailureByCodeAndDesc(exitStateModel));
+            return new ProcessResult().setIntent(intentService.getFailureByCodeAndDesc(exitStateModel));
         }
 
         final EntryStateModel entryStateModel = exitStateModel.getEntryStateModel();
