@@ -49,12 +49,6 @@ cds:
       url: http://127.0.0.1:8021/v1/storage
       networkTimeout: 5000
 
-hellgate:
-  client:
-    adapter:
-      url: http://localhost:8023/v1/proxyhost/provider
-      networkTimeout: 30000
-
 time.config:
   maxTimePolling: 600
   pollingDelay: 60

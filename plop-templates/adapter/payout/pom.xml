@@ -75,10 +75,6 @@
             <artifactId>cds-client-identity-document-storage</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.rbkmoney.adapter-client-lib</groupId>
-            <artifactId>hellgate-adapter-client</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.rbkmoney.adapter-thrift-lib</groupId>
             <artifactId>damsel-utils</artifactId>
         </dependency>
