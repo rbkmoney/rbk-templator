@@ -2,7 +2,7 @@ UTILS_PATH := build_utils
 TEMPLATES_PATH := .
 
 SERVICE_NAME := openapi-{{kebabCase name}}
-BUILD_IMAGE_TAG := 442c2c274c1d8e484e5213089906a4271641d95e
+BUILD_IMAGE_TAG := 917afcdd0c0a07bf4155d597bbba72e962e1a34a
 
 CALL_ANYWHERE := all install validate build java.compile java.deploy
 CALL_W_CONTAINER := $(CALL_ANYWHERE)

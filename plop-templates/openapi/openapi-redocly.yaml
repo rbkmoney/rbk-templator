@@ -1,6 +1,6 @@
 # See https://docs.redoc.ly/cli/configuration/ for more information.
 apiDefinitions:
-  core: "openapi/openapi.yaml"
+  core: 'openapi/openapi.yaml'
 lint:
   plugins:
     - './plugins/local.js'

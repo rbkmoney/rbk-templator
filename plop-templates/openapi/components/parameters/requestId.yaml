@@ -4,6 +4,6 @@ description: Уникальный идентификатор запроса к �
 required: true
 schema:
   type: string
-  minLength: 4
-  maxLength: 64
+  minLength: 1
+  maxLength: 32
   example: RQID-Z08G3EFE5DZ429VVO755BM19D51
