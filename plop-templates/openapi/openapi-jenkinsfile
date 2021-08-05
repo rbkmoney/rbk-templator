@@ -1,7 +1,7 @@
 #!groovy
 // -*- mode: groovy -*-
 
-build('openapi-{{kebabCase name}}', 'docker-host') {
+build('swag-{{kebabCase name}}', 'docker-host') {
     checkoutRepo()
     loadBuildUtils('build_utils')
 

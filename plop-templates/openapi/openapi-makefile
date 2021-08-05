@@ -1,7 +1,7 @@
 UTILS_PATH := build_utils
 TEMPLATES_PATH := .
 
-SERVICE_NAME := openapi-{{kebabCase name}}
+SERVICE_NAME := swag-{{kebabCase name}}
 BUILD_IMAGE_TAG := 917afcdd0c0a07bf4155d597bbba72e962e1a34a
 
 CALL_ANYWHERE := all install validate build java.compile java.deploy
