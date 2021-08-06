@@ -1,15 +1,15 @@
 {
     "name": "@pospolitanv/rbk-templator",
-    "version": "0.2.6",
+    "version": "0.2.8",
     "scripts": {
         "plop": "plop"
     },
     "dependencies": {
-        "chalk": "^4.0.0",
+        "chalk": "^4.1.0",
         "child_process": "^1.0.2",
-        "plop": "^2.2.0",
+        "plop": "^2.7.4",
         "shelljs": "^0.8.4",
-        "simple-git": "^1.107.0"
+        "simple-git": "^1.132.0"
     },
     "repository": {
         "url": "https://github.com/rbkmoney/rbk-templator"

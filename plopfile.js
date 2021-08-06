@@ -4,6 +4,7 @@ const serviceGenerator = require('./generators/service-generator');
 const libraryGenerator = require('./generators/library-generator');
 const swagGeneratorOldSpec = require('./generators/swag-generator-2.0');
 const swagGenerator = require('./generators/swag-generator-3.0');
+const openapiGenerator = require('./generators/openapi-generator-3.0');
 const adapterPayoutGenerator = require('./generators/adapter-payout-generator');
 const equalsConditionHelper = require('./helpers/equals-condition-helper');
 const pathHelper = require('./helpers/path-helper');
@@ -29,4 +30,5 @@ module.exports = function (plop) {
     plop.setGenerator('java-adapter-payout', adapterPayoutGenerator);
     plop.setGenerator('swag-template-2.0', swagGeneratorOldSpec);
     plop.setGenerator('swag-template-3.0', swagGenerator);
+    plop.setGenerator('openapi-template-3.0', openapiGenerator);
 };
