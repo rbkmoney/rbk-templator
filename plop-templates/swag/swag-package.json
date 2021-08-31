@@ -20,6 +20,6 @@
     "portfinder": "^1.0.25",
     "shelljs": "^0.8.3",
     "swagger-repo": "^2.0.0-rc.15",
-    "swagger-ui": "^3.24.2",
+    "swagger-ui": "^3.24.2"
   }
 }
