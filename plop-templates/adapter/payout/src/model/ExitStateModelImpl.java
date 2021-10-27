@@ -5,14 +5,16 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
+{{#if_eq doc true}}
 /**
  * Класс с отличающимися от основных свойствами ExitStateModel.
  */
+{{/if_eq}}
 @Data
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
 public class ExitStateModelImpl extends ExitStateModel {
-
+{{#if_eq doc true}}
 //    пример свойств:
 //    private String status;
 //    private String paynetOrderId;
@@ -22,4 +24,5 @@ public class ExitStateModelImpl extends ExitStateModel {
 //    private String approvalCode;
 //    private String processorRrn;
 //    private String orderStage;
+{{/if_eq}}
 }

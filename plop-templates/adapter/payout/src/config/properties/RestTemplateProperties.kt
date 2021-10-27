@@ -5,9 +5,11 @@ import org.springframework.boot.context.properties.ConstructorBinding
 import org.springframework.validation.annotation.Validated
 import javax.validation.constraints.NotEmpty
 
+{{#if_eq doc true}}
 /**
  * Проперти для restTemplate.
  */
+{{/if_eq}}
 @Validated
 @ConstructorBinding
 @ConfigurationProperties(prefix = "rest-template")

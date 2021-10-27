@@ -11,9 +11,11 @@ import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.ExitStateModelI
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
+{{#if_eq doc true}}
 /**
  * Описание обработчика, конвертера, процессора для шага удовлетворяющего условию в isHandle - Step.PAYOUT.
  */
+{{/if_eq}}
 @Component
 public class MoneyTransferHandler
         extends CommonHandlerImpl<MoneyTransferRequest, BaseResponse, EntryStateModelImpl, ExitStateModelImpl> {

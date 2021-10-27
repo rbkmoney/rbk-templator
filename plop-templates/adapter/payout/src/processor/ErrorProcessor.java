@@ -7,11 +7,13 @@ import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.ExitStateModelI
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+{{#if_eq doc true}}
 /**
  * Описание ошибочного процессора, должен быть последним в цепочке.
  * Обычно цепочка состоит из двух процессоров успешный->ошибочный.
  * Здесь происходит заполнение exitStateModel на основе ответа от 3ей стороны.
  */
+{{/if_eq}}
 @Slf4j
 @RequiredArgsConstructor
 public class ErrorProcessor implements Processor<BaseResponse, EntryStateModelImpl, ExitStateModelImpl> {
@@ -19,6 +21,7 @@ public class ErrorProcessor implements Processor<BaseResponse, EntryStateModelIm
     @Override
     public ExitStateModelImpl process(BaseResponse response, EntryStateModelImpl entryStateModel) {
         ExitStateModelImpl exitStateModel = new ExitStateModelImpl();
+{{#if_eq doc true}}
 //        Пример кода:
 //        exitStateModel.setEntryStateModel(entryStateModel);
 //        if (DECLINED.equals(response.getStatus())) {
@@ -34,6 +37,7 @@ public class ErrorProcessor implements Processor<BaseResponse, EntryStateModelIm
 //            exitStateModel.setErrorCode(errorCode);
 //            exitStateModel.setErrorMessage(errorMessage);
 //        }
+{{/if_eq}}
         return exitStateModel;
     }
 }

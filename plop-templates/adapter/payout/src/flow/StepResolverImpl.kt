@@ -6,6 +6,7 @@ import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.EntryStateModel
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.ExitStateModelImpl
 import org.springframework.stereotype.Component
 
+{{#if_eq doc true}}
 /**
  * Здесь определяется следующий Step для работы адаптера на основе полей из Model.
  * Можно использовать статусы ответа 3ей стороны, какие-либо поля, на основании которых можно принять решение о
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Component
  *
  * @see com.rbkmoney.adapter.bank.payout.spring.boot.starter.model.Step
  */
+{{/if_eq}}
 @Component
 class StepResolverImpl : StepResolver<EntryStateModelImpl, ExitStateModelImpl> {
     override fun resolveEntry(entryStateModel: EntryStateModelImpl): Step =

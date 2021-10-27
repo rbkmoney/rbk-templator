@@ -37,7 +37,7 @@ class ExitToProcessResultConverterImpl(
             initPollingInfo(exitStateModel)
         }
         val nextState: AdapterState = exitStateModel.nextState
-
+{{#if_eq doc true}}
 // Тут switch() с разными статусами Step
 //       пример №1
 //        intent = if (step == Step.PAYOUT || step == Step.CHECK) {
@@ -72,6 +72,7 @@ class ExitToProcessResultConverterImpl(
 //            }
 //            else -> throw UnsupportedOperationException("Unknown step : $step")
 //        }
+{{/if_eq}}
         val processResult = ProcessResult().apply {
             setNextState(Value.bin(stateSerializer.writeByte(nextState)))
             setIntent(intent)

@@ -25,6 +25,11 @@ module.exports = {
           message: 'Выберите язык:'
         },
         {
+          type: 'confirm',
+          name: 'doc',
+          message: 'Оставить комментарии к коду?'
+        },
+        {
             type: 'input',
             name: 'path',
             message: 'В какой директории создать шаблон? [.]'

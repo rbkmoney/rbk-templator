@@ -14,9 +14,11 @@ import javax.servlet.annotation.WebServlet;
 
 import java.io.IOException;
 
+{{#if_eq doc true}}
 /**
  * Endpoint.
  */
+{{/if_eq}}
 @WebServlet("/adapter/{{kebabCase bank_name}}/payout")
 public class AdapterServlet extends GenericServlet {
 

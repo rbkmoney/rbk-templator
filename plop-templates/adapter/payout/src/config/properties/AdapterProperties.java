@@ -8,9 +8,11 @@ import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.NotEmpty;
 
+{{#if_eq doc true}}
 /**
  * Проперти для работы адаптера (url, user-pass, certificate, etc.).
  */
+{{/if_eq}}
 @Setter
 @Getter
 @Configuration

@@ -7,9 +7,11 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
+{{#if_eq doc true}}
 /**
  * Пример запроса на выплату.
  */
+{{/if_eq}}
 @Data
 @SuperBuilder
 @NoArgsConstructor

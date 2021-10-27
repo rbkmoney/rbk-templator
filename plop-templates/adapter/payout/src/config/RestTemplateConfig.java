@@ -26,9 +26,11 @@ import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.time.Duration;
 
+{{#if_eq doc true}}
 /**
  * Конфигурация для restTemplate.
  */
+{{/if_eq}}
 @Configuration
 @RequiredArgsConstructor
 public class RestTemplateConfig {

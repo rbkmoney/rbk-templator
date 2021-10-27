@@ -11,9 +11,11 @@ import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.ExitStateModelI
 import org.springframework.core.convert.converter.Converter
 import org.springframework.stereotype.Component
 
+{{#if_eq doc true}}
 /**
  * Описание обработчика, конвертера, процессора для шага удовлетворяющего условию в isHandle - Step.СHECK.
  */
+{{/if_eq}}
 @Component
 class StatusHandler(
     remoteClient: RemoteClient,

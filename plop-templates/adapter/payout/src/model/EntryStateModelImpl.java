@@ -5,9 +5,11 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
+{{#if_eq doc true}}
 /**
  * Класс с отличающимися от основных свойствами EntryStateModel.
  */
+{{/if_eq}}
 @Data
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)

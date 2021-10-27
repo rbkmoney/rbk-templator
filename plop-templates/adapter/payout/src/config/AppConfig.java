@@ -12,9 +12,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
+{{#if_eq doc true}}
 /**
  * Различные бины для конфигурации приложения.
  */
+{{/if_eq}}
 @Configuration
 public class AppConfig {
 

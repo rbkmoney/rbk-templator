@@ -19,9 +19,11 @@ import org.springframework.context.annotation.Primary;
 
 import java.util.List;
 
+{{#if_eq doc true}}
 /**
  * Основная конфигурация для работы с библиотекой адаптеров.
  */
+{{/if_eq}}
 @Slf4j
 @Configuration
 public class ServiceConfig {
