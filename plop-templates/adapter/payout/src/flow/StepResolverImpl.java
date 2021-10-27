@@ -1,6 +1,4 @@
-package com.rbkmoney.
-
-{{adapterPayoutPackageCase bank_name}}.flow;
+package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.flow;
 
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.flow.StepResolver;
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.model.Step;
@@ -21,7 +19,6 @@ import java.util.Objects;
 {{/if_eq}}
 @Component
 public class StepResolverImpl implements StepResolver<EntryStateModelImpl, ExitStateModelImpl> {
-
 
     @Override
     public Step resolveEntry(EntryStateModelImpl entryStateModel) {

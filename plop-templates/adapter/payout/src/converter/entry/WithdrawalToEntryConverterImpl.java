@@ -25,6 +25,7 @@ public class WithdrawalToEntryConverterImpl implements WithdrawalToEntryStateCon
 
     private final CdsClientStorage cdsClientStorage;
     private final AdapterStateDeserializer adapterStateDeserializer;
+
     {{#if_eq doc true}}
     //todo не забудь добавить свои поля из EntryStateModelImpl
     {{/if_eq}}

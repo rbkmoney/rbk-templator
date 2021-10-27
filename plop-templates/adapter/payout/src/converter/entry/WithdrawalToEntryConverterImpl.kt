@@ -18,6 +18,7 @@ class WithdrawalToEntryConverterImpl(
     private val cdsClientStorage: CdsClientStorage,
     private val adapterStateDeserializer: AdapterStateDeserializer
 ) : WithdrawalToEntryStateConverter<EntryStateModelImpl> {
+
     {{#if_eq doc true}}
     // todo не забудь добавить свои поля из EntryStateModelImpl
     {{/if_eq}}
