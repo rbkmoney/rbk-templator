@@ -15,6 +15,6 @@ import org.springframework.stereotype.Component
 class EntryStateModelToMoneyTransferRequestConverter : Converter<EntryStateModelImpl, MoneyTransferRequest> {
     override fun convert(model: EntryStateModelImpl): MoneyTransferRequest {
         val options = model.options
-        return MoneyTransferRequest("") {{#if_eq doc true}} // todo 3rd-party fields here {{/if_eq}}
+        return MoneyTransferRequest("") {{#if_eq doc true}}// todo 3rd-party fields here{{/if_eq}}
     }
 }

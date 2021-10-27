@@ -1,11 +1,9 @@
 package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.validator
 
 import com.rbkmoney.adapter.bank.payout.spring.boot.starter.validator.WithdrawalValidator
-import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.constant.OptionsField
 import com.rbkmoney.damsel.msgpack.Value
 import com.rbkmoney.damsel.withdrawals.provider_adapter.Withdrawal
 import org.springframework.stereotype.Component
-import java.util.Objects
 
 {{#if_eq doc true}}
 /**
