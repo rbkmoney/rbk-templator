@@ -27,6 +27,7 @@ module.exports = {
         {
           type: 'confirm',
           name: 'doc',
+          default: true,
           message: 'Оставить комментарии к коду?'
         },
         {
