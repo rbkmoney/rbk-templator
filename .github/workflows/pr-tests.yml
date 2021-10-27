@@ -17,8 +17,8 @@ jobs:
       - run: npm run plop java-library kotlin-library test Kotlin output/kotlin-library n
       - run: npm run plop java-service java-service test Java output/java-service n
       - run: npm run plop java-service kotlin-service test Kotlin output/kotlin-service n
-      - run: npm run plop java-adapter-payout bank test Java output/java-bank-payout n
-      - run: npm run plop java-adapter-payout bank test Kotlin output/kotlin-bank-payout n
+      - run: npm run plop java-adapter-payout bank test Java true output/java-bank-payout n
+      - run: npm run plop java-adapter-payout bank test Kotlin true output/kotlin-bank-payout n
       - run: npm run plop swag-template-3.0 swag swag output/swag n
       - run: npm run plop openapi-template-3.0 openapi openapi output/openapi n
       - uses: actions/upload-artifact@v2
