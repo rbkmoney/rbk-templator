@@ -7,11 +7,13 @@ import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.ExitStateModelI
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+{{#if_eq doc true}}
 /**
  * Описание успешного процессора, должен принимать в цепочке следующий процессор.
  * Обычно цепочка состоит из двух процессоров успешный->ошибочный.
  * Здесь происходит заполнение exitStateModel на основе ответа от 3ей стороны.
  */
+{{/if_eq}}
 @Slf4j
 @RequiredArgsConstructor
 public class SuccessProcessor implements Processor<BaseResponse, EntryStateModelImpl, ExitStateModelImpl> {
@@ -20,6 +22,7 @@ public class SuccessProcessor implements Processor<BaseResponse, EntryStateModel
 
     @Override
     public ExitStateModelImpl process(BaseResponse response, EntryStateModelImpl entryStateModel) {
+{{#if_eq doc true}}
 //        Пример кода:
 //        if (isSuccess(response)) {
 //            log.info("Success response: {}", response);
@@ -33,12 +36,14 @@ public class SuccessProcessor implements Processor<BaseResponse, EntryStateModel
 //            log.info("Received not success response: {}", response);
 //            return next.process(response, entryStateModel);
 //        }
-        return null; //todo delete!
+{{/if_eq}}
+        return null; {{#if_eq doc true}}//todo delete!{{/if_eq}}
     }
-
+{{#if_eq doc true}}
 //    public static boolean isSuccess(BaseResponse response) {
 //        return response != null
 //                && response.getErrorCode() == null
 //                && response.getErrorMessage() == null;
 //    }
+{{/if_eq}}
 }

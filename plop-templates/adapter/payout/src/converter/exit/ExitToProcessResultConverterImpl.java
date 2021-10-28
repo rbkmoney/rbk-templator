@@ -43,7 +43,7 @@ public class ExitToProcessResultConverterImpl implements ExitStateToProcessResul
         }
 
         AdapterState nextState = exitStateModel.getNextState();
-
+{{#if_eq doc true}}
 //Тут switch() с разными статусами Step
 //       пример №1
 //        if (step == Step.PAYOUT || step == Step.CHECK) {
@@ -92,6 +92,7 @@ public class ExitToProcessResultConverterImpl implements ExitStateToProcessResul
 //            default:
 //                throw new UnsupportedOperationException("Unknown step : " + step);
 //        }
+{{/if_eq}}
 
         final ProcessResult processResult = new ProcessResult();
         processResult.setNextState(Value.bin(stateSerializer.writeByte(nextState)));

@@ -6,11 +6,13 @@ import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.EntryStateModel
 import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.model.ExitStateModelImpl
 import mu.KotlinLogging
 
+{{#if_eq doc true}}
 /**
  * Описание успешного процессора, должен принимать в цепочке следующий процессор.
  * Обычно цепочка состоит из двух процессоров успешный->ошибочный.
  * Здесь происходит заполнение exitStateModel на основе ответа от 3ей стороны.
  */
+{{/if_eq}}
 class SuccessProcessor(
     private val next: Processor<BaseResponse, EntryStateModelImpl, ExitStateModelImpl>
 ) : Processor<BaseResponse, EntryStateModelImpl, ExitStateModelImpl> {
@@ -18,6 +20,7 @@ class SuccessProcessor(
     private val log = KotlinLogging.logger { }
 
     override fun process(response: BaseResponse, entryStateModel: EntryStateModelImpl): ExitStateModelImpl {
+{{#if_eq doc true}}
 //        Пример кода:
 //        return if (isSuccess(response)) {
 //            log.info { "Success response: $response" }
@@ -29,6 +32,7 @@ class SuccessProcessor(
 //            log.info { "Received not success response: $response" }
 //            next.process(response, entryStateModel)
 //        }
+{{/if_eq}}
         return ExitStateModelImpl()
     }
 

@@ -20,9 +20,11 @@ import org.springframework.web.client.RestTemplate
 import java.time.Duration
 import javax.net.ssl.SSLContext
 
+{{#if_eq doc true}}
 /**
  * Конфигурация для restTemplate.
  */
+{{/if_eq}}
 @Configuration
 @EnableConfigurationProperties(RestTemplateProperties::class)
 class RestTemplateConfig(private val properties: RestTemplateProperties) {

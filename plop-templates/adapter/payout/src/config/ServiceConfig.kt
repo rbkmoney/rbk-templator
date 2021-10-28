@@ -16,9 +16,11 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Primary
 
+{{#if_eq doc true}}
 /**
  * Основная конфигурация для работы с библиотекой адаптеров.
  */
+{{/if_eq}}
 @Configuration
 class ServiceConfig {
 

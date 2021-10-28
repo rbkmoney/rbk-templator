@@ -9,9 +9,11 @@ import javax.servlet.ServletRequest
 import javax.servlet.ServletResponse
 import javax.servlet.annotation.WebServlet
 
+{{#if_eq doc true}}
 /**
  * Endpoint.
  */
+{{/if_eq}}
 @WebServlet("/adapter/{{kebabCase bank_name}}/payout")
 class AdapterServlet(
     private val payoutAdapterServiceLogDecorator: AdapterSrv.Iface

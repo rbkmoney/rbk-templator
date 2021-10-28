@@ -11,9 +11,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+{{#if_eq doc true}}
 /**
  * Здесь находится реализация методов вызова 3ей стороны.
  */
+{{/if_eq}}
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -21,8 +23,10 @@ public class RemoteClientImpl implements RemoteClient {
 
     private final RestTemplate restTemplate;
     private final ObjectMapper objectMapper;
+{{#if_eq doc true}}
 //    todo implement and use
 //    private final ResponseConverter<BaseResponse> responseConverter;
+{{/if_eq}}
 
     @Value("${adapter.url}")
     private String basePath;

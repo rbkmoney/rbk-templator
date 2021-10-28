@@ -9,6 +9,7 @@ import com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.processor.SuccessProc
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
+{{#if_eq doc true}}
 /**
  * Конфигурация для настройки и заведения процессоров.
  * Важно заканчивать цепочку с ErrorProcessor, чтобы все необработанные случаи падали в ошибку.
@@ -16,14 +17,16 @@ import org.springframework.context.annotation.Configuration
  * @see com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.processor.SuccessProcessor
  * @see com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.processor.ErrorProcessor
  */
+{{/if_eq}}
 @Configuration
 class ProcessorConfig {
-
+    {{#if_eq doc true}}
     /**
      * ErrorProcessor и SuccessProcessor не всегда достаточно для всего сценария выплат.
      * Могут потребоваться более специфичные классы - MoneyTransferSuccessProcessor и MoneyTransferErrorProcessor для
      * проведения выплаты, а также StatusSuccessProcessor и StatusErrorProcessor для проверки статуса выплаты
      */
+    {{/if_eq}}
     @Bean
     fun responseProcessorChain(): Processor<BaseResponse, EntryStateModelImpl, ExitStateModelImpl> {
         return SuccessProcessor(ErrorProcessor())

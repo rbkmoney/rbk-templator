@@ -8,16 +8,20 @@ import com.rbkmoney.damsel.msgpack.Value
 import com.rbkmoney.damsel.withdrawals.provider_adapter.Withdrawal
 import org.springframework.stereotype.Component
 
+{{#if_eq doc true}}
 /**
  * Конвертер запроса из Hellgate на выплату в EntryStateModel - общую модель для адаптеров.
  */
+{{/if_eq}}
 @Component
 class WithdrawalToEntryConverterImpl(
     private val cdsClientStorage: CdsClientStorage,
     private val adapterStateDeserializer: AdapterStateDeserializer
 ) : WithdrawalToEntryStateConverter<EntryStateModelImpl> {
 
+    {{#if_eq doc true}}
     // todo не забудь добавить свои поля из EntryStateModelImpl
+    {{/if_eq}}
     override fun convert(
         withdrawal: Withdrawal,
         state: Value?,
@@ -32,10 +36,12 @@ class WithdrawalToEntryConverterImpl(
         val adapterState = adapterStateDeserializer.read(data)
         val trxinfo = adapterState.trxInfo
         trxinfo?.trxExtra?.let {
+        {{#if_eq doc true}}
 //            custom fields in trxExtra
 //            entryModel.paynetOrderId = trxinfo.trxExtra[TrxExtraConstant.PAYNET_ORDER_ID])
 //            entryModel.serialNumber = trxinfo.trxExtra[TrxExtraConstant.SERIAL_NUMBER])
         }
+        {{/if_eq}}
         entryModel.state = adapterState
         entryModel.withdrawalId = withdrawal.getId()
         entryModel.amount = withdrawal.body.amount
