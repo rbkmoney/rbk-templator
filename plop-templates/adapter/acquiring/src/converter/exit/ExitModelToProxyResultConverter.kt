@@ -51,7 +51,7 @@ class ExitModelToProxyResultConverter(
                 //          )
                 //       }
                 //       else -> throw IllegalStateException("${exitStateModel.status} is unsupported!")
-                //}
+                // }
                 {{/if_eq}}
             }
             Step.CAPTURE, Step.DO_NOTHING -> ProxyProviderPackageCreators.createFinishIntentSuccess()

@@ -1,6 +1,6 @@
 package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.flow
 
-import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}model.CustomEntryStateModel
+import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomEntryStateModel
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomExitStateModel
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.spring.boot.starter.flow.StepResolver
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.spring.boot.starter.model.GeneralEntryStateModel
