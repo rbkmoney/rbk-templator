@@ -1,4 +1,4 @@
-package com.rbkmoney.{{adapterPayoutPackageCase bank_name}}.validator;
+package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.validator;
 
 import com.rbkmoney.adapter.common.Validator;
 import com.rbkmoney.damsel.proxy_provider.PaymentContext;
