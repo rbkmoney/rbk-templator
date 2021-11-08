@@ -1,4 +1,4 @@
-package com.rbkmoney.adapterxpatemerit.config.properties;
+package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.config.properties;
 
 import lombok.Getter;
 import lombok.Setter;
