@@ -1,4 +1,4 @@
-package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.config;
+package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.config
 
 import com.fasterxml.jackson.core.JsonParser
 import com.fasterxml.jackson.databind.DeserializationFeature
@@ -60,5 +60,4 @@ class AppConfig {
     ): RecurrentTokenCallbackHandler {
         return RecurrentTokenCallbackHandler(adapterDeserializer, adapterSerializer, callbackDeserializer)
     }
-
 }

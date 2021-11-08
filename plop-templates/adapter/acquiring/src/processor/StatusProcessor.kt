@@ -1,10 +1,10 @@
 package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.processor
 
+import com.rbkmoney.adapter.bank.client.model.StatusResponse
+import com.rbkmoney.adapter.bank.model.CustomEntryStateModel
+import com.rbkmoney.adapter.bank.model.CustomExitStateModel
 import com.rbkmoney.adapter.common.model.AdapterContext
 import com.rbkmoney.adapter.common.processor.Processor
-import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.client.model.StatusResponse
-import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomEntryStateModel
-import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomExitStateModel
 
 class StatusProcessor : Processor<CustomExitStateModel, StatusResponse, CustomEntryStateModel> {
 

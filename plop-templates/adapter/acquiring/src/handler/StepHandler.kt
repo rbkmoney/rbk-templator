@@ -1,10 +1,10 @@
 package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.handler
 
-import com.rbkmoney.adapter.common.handler.CommonHandler
-import com.rbkmoney.adapter.common.processor.Processor
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.client.RemoteClientException
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomEntryStateModel
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomExitStateModel
+import com.rbkmoney.adapter.common.handler.CommonHandler
+import com.rbkmoney.adapter.common.processor.Processor
 import org.springframework.core.convert.converter.Converter
 import java.util.function.Function
 

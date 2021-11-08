@@ -1,13 +1,13 @@
 package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.converter.entry
 
+import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.constant.AdapterConstants
+import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomEntryStateModel
 import com.rbkmoney.adapter.common.enums.TargetStatus
 import com.rbkmoney.adapter.common.state.deserializer.AdapterDeserializer
 import com.rbkmoney.adapter.common.state.utils.AdapterStateUtils
 import com.rbkmoney.adapter.common.utils.converter.CardDataUtils
 import com.rbkmoney.adapter.common.utils.converter.PaymentDataConverter
 import com.rbkmoney.adapter.common.utils.converter.TargetStatusResolver
-import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.constant.AdapterConstants
-import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomEntryStateModel
 import com.rbkmoney.cds.client.storage.CdsClientStorage
 import com.rbkmoney.cds.client.storage.utils.BankCardExtractor
 import com.rbkmoney.cds.storage.SessionData

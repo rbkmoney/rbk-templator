@@ -1,10 +1,10 @@
 package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.service
 
-import com.rbkmoney.adapter.bank.spring.boot.starter.flow.StepResolver
-import com.rbkmoney.adapter.common.handler.CommonHandler
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomEntryStateModel
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomExitStateModel
+import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.spring.boot.starter.flow.StepResolver
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.validator.ValidatorImpl
+import com.rbkmoney.adapter.common.handler.CommonHandler
 import com.rbkmoney.damsel.proxy_provider.PaymentCallbackResult
 import com.rbkmoney.damsel.proxy_provider.PaymentContext
 import com.rbkmoney.damsel.proxy_provider.PaymentProxyResult

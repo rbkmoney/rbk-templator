@@ -11,6 +11,4 @@ import org.springframework.validation.annotation.Validated
 {{/if_eq}}
 @Validated
 @ConfigurationProperties(prefix = "adapter")
-class Adapter{{properCase bank_name}}Properties : CommonAdapterProperties() {
-
-}
+class Adapter{{properCase bank_name}}Properties : CommonAdapterProperties()

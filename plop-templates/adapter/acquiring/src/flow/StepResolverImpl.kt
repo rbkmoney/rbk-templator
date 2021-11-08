@@ -1,11 +1,11 @@
 package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.flow
 
-import com.rbkmoney.adapter.bank.spring.boot.starter.flow.StepResolver
-import com.rbkmoney.adapter.bank.spring.boot.starter.model.GeneralEntryStateModel
+import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}model.CustomEntryStateModel
+import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomExitStateModel
+import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.spring.boot.starter.flow.StepResolver
+import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.spring.boot.starter.model.GeneralEntryStateModel
 import com.rbkmoney.adapter.common.enums.Step
 import com.rbkmoney.adapter.common.enums.TargetStatus
-import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomEntryStateModel
-import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomExitStateModel
 import mu.KotlinLogging
 import org.springframework.stereotype.Component
 import java.util.Objects

@@ -1,4 +1,4 @@
-package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.config;
+package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.config
 
 import com.rbkmoney.adapter.common.component.NetworkFilterComponent
 import org.apache.catalina.connector.Connector

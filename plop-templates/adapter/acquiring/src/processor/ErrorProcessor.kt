@@ -1,10 +1,10 @@
 package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.processor
 
-import com.rbkmoney.adapter.common.model.AdapterContext
-import com.rbkmoney.adapter.common.processor.Processor
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.client.model.BaseResponse
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomEntryStateModel
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomExitStateModel
+import com.rbkmoney.adapter.common.model.AdapterContext
+import com.rbkmoney.adapter.common.processor.Processor
 
 {{#if_eq doc true}}
 /**
