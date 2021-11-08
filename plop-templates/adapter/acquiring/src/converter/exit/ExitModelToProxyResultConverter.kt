@@ -1,7 +1,7 @@
 package com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.converter.exit
 
-import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}.backoff.SleepIntentHelper
-import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}.model.CustomExitStateModel
+import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.backoff.SleepIntentHelper
+import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomExitStateModel
 import com.rbkmoney.adapter.common.enums.Step
 import com.rbkmoney.adapter.common.state.serializer.AdapterSerializer
 import com.rbkmoney.damsel.domain.Failure

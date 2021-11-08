@@ -4,7 +4,7 @@ import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.client.RemoteClien
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.client.model.PreAuthRequest
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.client.model.PreAuthResponse
 import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomEntryStateModel
-import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}k.model.CustomExitStateModel
+import com.rbkmoney.{{adapterAcquiringPackageCase bank_name}}.model.CustomExitStateModel
 import com.rbkmoney.adapter.common.enums.Step
 import com.rbkmoney.adapter.common.processor.Processor
 import org.springframework.core.convert.converter.Converter
