@@ -17,8 +17,8 @@ jobs:
       - run: npm run plop java-library kotlin-library test Kotlin output/kotlin-library n
       - run: npm run plop java-service java-service test Java output/java-service n
       - run: npm run plop java-service kotlin-service test Kotlin output/kotlin-service n
-      - run: npm run plop java-adapter bank test Java true output/java-bank-payout n
-      - run: npm run plop java-adapter bank test Kotlin true output/kotlin-bank-payout n
+      - run: npm run plop java-adapter bank test Java true output/java-bank n
+      - run: npm run plop java-adapter bank test Kotlin true output/kotlin-bank n
       - run: npm run plop java-adapter-payout bank test Java true output/java-bank-payout n
       - run: npm run plop java-adapter-payout bank test Kotlin true output/kotlin-bank-payout n
       - run: npm run plop swag-template-3.0 swag swag output/swag n
@@ -66,6 +66,12 @@ jobs:
         run: mvn verify
         working-directory: output/java-bank-payout/
       - name: Test build of kotlin-bank-payout
+        run: mvn verify
+        working-directory: output/kotlin-bank/
+      - name: Test build of java-bank
+        run: mvn verify
+        working-directory: output/java-bank/
+      - name: Test build of kotlin-bank
         run: mvn verify
         working-directory: output/kotlin-bank-payout/
       - name: Test build of swag
