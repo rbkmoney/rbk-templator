@@ -59,6 +59,7 @@ public class ExitModelToProxyResultConverter implements Converter<CustomExitStat
                 // Тут можно добавить проверку статуса от 3-й стороны.
                 // И в зависимости от этого продолжать запрашивать статус или завершить взаимодействие.
                 // Пример:
+                {{/if_eq}}
                 // switch (existStateModel.status) {
                 //     case SUCCESS:
                 //         intent = ProxyProviderPackageCreators.createFinishIntentSuccess();
@@ -67,7 +68,6 @@ public class ExitModelToProxyResultConverter implements Converter<CustomExitStat
                 //         ProxyProviderPackageCreators.createFinishIntentFailure(
                 //             errorMapping.mapFailure(exitStateModel.status.toString())
                 //         )
-                {{/if_eq}}
             default:
                 throw new IllegalStateException("Wrong next step: " + nextStep);
         }

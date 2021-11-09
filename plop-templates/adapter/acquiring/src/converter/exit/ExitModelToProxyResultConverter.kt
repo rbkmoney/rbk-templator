@@ -41,6 +41,7 @@ class ExitModelToProxyResultConverter(
                 // Тут можно добавить проверку статуса от 3-й стороны.
                 // И в зависимости от этого продолжать запрашивать статус или завершить взаимодействие.
                 // Пример:
+                {{/if_eq}}
                 // when (exitStateModel.status) {
                 //      TransactionStatus.SUCCESS -> {
                 //          ProxyProviderPackageCreators.createFinishIntentSuccess()
@@ -52,7 +53,6 @@ class ExitModelToProxyResultConverter(
                 //       }
                 //       else -> throw IllegalStateException("${exitStateModel.status} is unsupported!")
                 // }
-                {{/if_eq}}
             }
             Step.CAPTURE, Step.DO_NOTHING -> ProxyProviderPackageCreators.createFinishIntentSuccess()
             else -> throw IllegalStateException("Wrong next step: $nextStep")
