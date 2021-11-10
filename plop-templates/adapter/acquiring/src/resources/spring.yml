@@ -1,0 +1,79 @@
+server:
+  port: '@server.port@'
+  rest:
+    port: '@server.rest.port@'
+    endpoint: '@server.rest.endpoint@'
+
+management:
+  security:
+    flag: false
+  server:
+    port: '@management.port@'
+  metrics:
+    export:
+      statsd:
+        flavor: etsy
+        enabled: false
+      prometheus:
+        enabled: false
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+
+spring:
+  application:
+    name: '@project.name@'
+  output:
+    ansi:
+      enabled: always
+  main:
+    allow-bean-definition-overriding: true
+
+info:
+  version: '@project.version@'
+  stage: dev
+
+error-mapping:
+  file: classpath:fixture/errors.json
+  patternReason: "'%s' - '%s'" # 'code' - 'description'
+
+cds:
+  client:
+    identity-document-storage:
+      url: http://127.0.0.1:8021/v1/identity_document_storage
+      networkTimeout: 5000
+    storage:
+      url: http://127.0.0.1:8021/v1/storage
+      networkTimeout: 5000
+
+hellgate:
+  client:
+    adapter:
+      url: http://localhost:8023/v1/proxyhost/provider
+      networkTimeout: 30000
+
+time.config:
+  maxTimePolling: 600
+  pollingDelay: 60
+
+adapter:
+  url: https://3rd-party-url
+  username: test
+  password: test
+
+restTemplate:
+  requestTimeout: 60000
+  poolTimeout: 10000
+  connectionTimeout: 10000
+  maxTotalPooling: 200
+  defaultMaxPerRoute: 200
+  networkTimeout: 60000
+  connectTimeout: 10000

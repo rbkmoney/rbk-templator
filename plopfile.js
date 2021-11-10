@@ -6,11 +6,14 @@ const swagGeneratorOldSpec = require('./generators/swag-generator-2.0');
 const swagGenerator = require('./generators/swag-generator-3.0');
 const openapiGenerator = require('./generators/openapi-generator-3.0');
 const adapterPayoutGenerator = require('./generators/adapter-payout-generator');
+const adapterGenerator = require('./generators/adapter-generator');
 const equalsConditionHelper = require('./helpers/equals-condition-helper');
 const pathHelper = require('./helpers/path-helper');
 const packageCase = require('./helpers/package-case-helper');
 const adapterPayoutDirCase = require('./helpers/adapter/payout/adapter-dir-case-helper');
 const adapterPayoutPackageCase = require('./helpers/adapter/payout/adapter-package-case-helper');
+const adapterAcquiringDirCase = require('./helpers/adapter/acquiring/adapter-dir-case-helper');
+const adapterAcquiringPackageCase = require('./helpers/adapter/acquiring/adapter-package-case-helper');
 const chalk = require('chalk');
 
 module.exports = function (plop) {
@@ -22,11 +25,14 @@ module.exports = function (plop) {
     plop.addHelper('packageCase', packageCase);
     plop.addHelper('adapterPayoutDirCase', adapterPayoutDirCase);
     plop.addHelper('adapterPayoutPackageCase', adapterPayoutPackageCase);
+    plop.addHelper('adapterAcquiringDirCase', adapterAcquiringDirCase);
+    plop.addHelper('adapterAcquiringPackageCase', adapterAcquiringPackageCase);
 
     // generators
     plop.setGenerator('java-proto', protoGenerator);
     plop.setGenerator('java-service', serviceGenerator);
     plop.setGenerator('java-library', libraryGenerator);
+    plop.setGenerator('java-adapter', adapterGenerator);
     plop.setGenerator('java-adapter-payout', adapterPayoutGenerator);
     plop.setGenerator('swag-template-2.0', swagGeneratorOldSpec);
     plop.setGenerator('swag-template-3.0', swagGenerator);
