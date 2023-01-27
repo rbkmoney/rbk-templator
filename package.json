@@ -9,7 +9,7 @@
         "child_process": "^1.0.2",
         "plop": "^2.7.4",
         "shelljs": "^0.8.4",
-        "simple-git": "^1.132.0"
+        "simple-git": "^3.16.0"
     },
     "repository": {
         "url": "https://github.com/rbkmoney/rbk-templator"
